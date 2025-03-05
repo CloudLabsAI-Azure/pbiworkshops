@@ -329,14 +329,31 @@
 
     **Important:** Designing modular pipelines makes development, testing, and maintenance easier. They are also portable, allowing components to be reused across different projects. This approach is particularly beneficial in large-scale data processing environments, where reusability and modularization are key to efficient data integration workflows.
 
-1. From the Output pane monitor that the activities and **Succeedded** and once done close the pipeline by selecting the **X** on the left side-rail to return to the workspace.
+1. From the **Output** pane monitor that the activities and **Succeedded** and once done close the pipeline by selecting the **X** on the left side-rail to return to the workspace.
 
     ![Invoke succeeded and close](./Media/get-contoso-sample-general-succeeded-close.png)
 
-# Next steps
+### Unlock the power of T-SQL, Power BI Direct Lake mode, Excel connectivity, and more with your data
 
-In this lab, we covered a comprehensive range of topics essential for connecting to and transforming data with Dataflow Gen2. This included merging and shaping data tables, and writing it to a lakehouse data destination. We also explored the use of shortcuts to eliminate data duplication in projects. By creating shortcuts to data sources, we reduced the need for data duplication and unnecessary data movements, thereby saving storage space and improving the performance of our data workflows.
+1. Within the workspace, select the **Golden data** task flow item and from the filtered list, select the **g_IADWarehouse** Warehouse.
 
-Overall, these skills are essential for effectively leveraging a low-code data prep interface. They enable you to streamline your data projects, optimize storage and retrieval, and ensure that your data is always ready for analysis.
+    ![Task flow g_IADWarehouse selection](./Media/golden-data-g-iadwarehouse.png)
+
+1. Now that your data ingestion processes are complete, using the Fabric warehouse as your gold layer simplifies data management and enhances the user experience in several ways:
+
+    - The Fabric warehouse offers built-in [RLS, CLS, and OLS security](https://learn.microsoft.com/fabric/data-warehouse/security) and schemas, ensuring secure and organized data access. 
+    - Users can write [T-SQL queries](https://learn.microsoft.com/fabric/data-warehouse/sql-query-editor), build [Direct Lake semantic models](https://learn.microsoft.com/fabric/fundamentals/direct-lake-develop) via the Reporting tab, and use Excel for direct connectivity to up-to-date information.
+    - Additionally, [Power BI explorations](https://learn.microsoft.com/power-bi/consumer/explore-data-service) allow for instant visual creation, making data analysis and reporting more efficient and user-friendly.
+
+    ![Start building your solutions](./Media/golden-data-g-iadwarehouse-interactions.png)
+
+
+# In closing
+
+In this lab, we explored the medallion architecture to efficiently manage and transform data. The medallion architecture organizes data into distinct layers: Bronze (raw data), Silver (cleansed and transformed data), Gold (curated data for analysis), and Platinum (for serving insights with Power BI semantic models).
+
+We covered essential topics such as orchestrating data movement with dynamic expression-driven pipelines, moving data with the Copy job, and transforming data with Dataflow Gen2. This included leveraging low-code and no-code data ingestion interfaces, streamlining data projects, optimizing storage and retrieval, and ensuring data readiness for analysis.
+
+By implementing the medallion architecture, you can enhance data management and user experience, making your data projects more efficient and effective.
 
 - Return to the [Data Factory in a Day](./README.md) homepage
