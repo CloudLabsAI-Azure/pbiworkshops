@@ -20,7 +20,7 @@ The content in this lab requires enablement of select tenant settings and licens
 
 ## Presentation material
 
-To view or download the latest PowerPoint presentation of the lab material, visit the following link: [Data Factory in a Day with Microsoft Fabric]().
+To view or download the latest PowerPoint presentation of the lab material, visit the following link: [Data Factory in a Day with Microsoft Fabric](https://github.com/microsoft/pbiworkshops/blob/main/Data%20Factory%20in%20a%20Day/Data%20Factory%20in%20a%20Day%20with%20Microsoft%20Fabric.pdf).
 
 ## Getting started
 
@@ -53,4 +53,8 @@ In this lab you'll learn about how to shape and orchestrate your data using Data
 1. Configuring [data destination outputs](https://learn.microsoft.com/fabric/data-factory/dataflow-gen2-data-destinations-and-managed-settings).
 1. How to create and configure a [Copy job](https://learn.microsoft.com/fabric/data-factory/what-is-copy-job) for a streamlined and user-friendly data ingestion process from source to destination.
 
+<<<<<<< HEAD
 To start the lab, visit [Transforming and copying data](./DataflowGen2.md)
+=======
+To start the lab, visit [Dataflow Gen2](./DataflowGen2.md)
+>>>>>>> e9c14dc2d7a670e77739d460565dc444edf09cce

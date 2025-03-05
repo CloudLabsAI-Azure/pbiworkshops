@@ -29,5 +29,5 @@ The data for this lab is from the [Contoso Retail Industry](https://www.microsof
 # Document structure
 
 This document and has two main sections:
-1. **Microsoft Fabric service**: This section highlights the features available in the Microsoft Fabric cloud service including the ability to create items and publish Power BI Desktop datasets and reports to the web.
+1. **Microsoft Fabric**: This section highlights the features available in the Microsoft Fabric cloud service including the ability to create items and publish Power BI Desktop datasets and reports to the web.
 1. **Power BI Desktop**: This section highlights the features available in Power BI Desktop and walks the user through the process of bringing in data from the data source, modeling and creating visualizations.
