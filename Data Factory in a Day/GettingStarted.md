@@ -23,7 +23,7 @@ We'll begin by navigating to a new, empty, or non-production workspace to check 
 
 ### Medallion task flow
 
-1. To begin, from the empty workspace, select the option **Select a task flow** to choose one of Microsoft's predesigned task flows. These predesigned task flows provide a structured approach to managing data projects, ensuring that best practices are followed and that the workflow is efficient and effective.
+1. To begin, from the empty workspace, select the option **Select a predefined task flow** to choose one of Microsoft's task flows. These predesigned task flows provide a structured approach to managing data projects, ensuring that best practices are followed and that the workflow is efficient and effective.
 
     **Note:** If you do not see the task flow section within your workspace, check for the chevron to expand or collapse this section from the workspace item view. This ensures that you have access to all the necessary tools and options for your project.
 
@@ -77,9 +77,9 @@ We'll begin by navigating to a new, empty, or non-production workspace to check 
 
     ![Sample data holidays preview](./Media/holidays-preview.png)
 
-1. Choose the **b_IADLakehouse** lakehouse item for the data destination. This step is crucial as it determines where your data will be stored.
+1. Choose the **b_IADLakehouse** lakehouse item for the data destination from the **OneLake catalog** list of items. This step is crucial as it determines where your data will be stored.
 
-    **Note:** You can also find a list of items that you have access to via the **OneLake data hub** tab or by typing the item name directly into the **Search** bar. This flexibility ensures that you can easily locate and select the appropriate data destination.
+    **Note:** You can also find a list of items that you have access to via the **OneLake** tab or by typing the item name directly into the **Search** bar. This flexibility ensures that you can easily locate and select the appropriate data destination.
 
     ![Sample data holidays preview](./Media/choose-data-destination.png)
 
@@ -168,6 +168,15 @@ We'll begin by navigating to a new, empty, or non-production workspace to check 
 1. If we return to our previously created **b_IADLake** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the **Holidays.csv** file has now been added to the Files section with a nested folder structure based on the year, month, and date of the run. This confirmation step ensures that the dynamic file output is working as intended and that your data is being organized correctly.
 
     ![Copy output succeeded](./Media/dynamic-nested-folder.png)
+
+1. Before proceeding, select the ellipses (**...**) next to the top level year folder and then the **Delete** option to remove the sample data from this lab.
+Before proceeding, locate the ellipses (**...**) next to the top-level year folder. Click on the ellipses and select the **Delete** option to remove the sample data from this lab. 
+
+    ![Delete sample folder](./Media/delete-sample-folder.png)
+
+1. A confirmation window will appear, select **Delete** to proceed with removing the contents.
+
+    ![Confirm folder deletion](./Media/confirm-delete-sample-folder.png)
 
 # Next steps
 

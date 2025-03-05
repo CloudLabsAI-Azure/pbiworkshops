@@ -1,4 +1,4 @@
-# Data pipeline
+# Orchestrating data movement
 
 In this lab, we will guide you through the process of creating a comprehensive data ingestion solution using data pipelines in Microsoft Fabric. We will start by setting up the copy activity to transfer data from a sample source to a dynamic destination within a lakehouse. This includes using the expression builder to create a dynamic folder structure based on the current date of execution.
 
@@ -62,19 +62,19 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ```text
     @concat(
+        'ContosoSales\',
         formatDateTime(
             convertFromUtc(
                 utcnow(), 'Central Standard Time'
             ),
             'yyyy/MM/dd'
-        ),
-        '/ContosoSales'
+        )
     )
     ```
 
     ![Destination folder](./Media/expression-builder-date-and-folder.png)
 
-1. With the Copy data activity and Destination settings still selected, select the drop-down for the **Copy behavior** and then choose the **Preserve hierarchy** option. This option maintains the original file names as they are within the zip file, ensuring that the file structure is preserved during the copy process.
+1. With the Copy data activity and Destination settings still selected, expand the **Advanced** section, select the drop-down for the **Copy behavior** and then choose the **Preserve hierarchy** option. This option maintains the original file names as they are within the zip file, ensuring that the file structure is preserved during the copy process.
 
     ![Destination folder](./Media/copy-behavior-preserve.png)
 
@@ -95,7 +95,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Unzip copy output succeeded](./Media/unzip-pipeline-status-succeeded.png)
 
-1. If we return to our previously created **b_IADLake** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the zip file's content has now been added to the Files section. The files should be organized with a nested folder structure based on the year, month, date, and data source title for the pipeline run.
+1. If we return to our previously created **b_IADLake** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the zip file's content has now been added to the Files section. The files should be organized with a nested folder structure based on the data source title, year, month, and date of the pipeline run.
 
     ![Copy output succeeded](./Media/unzip-lakehouse-contents.png)
 
@@ -139,13 +139,13 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ```text
     @concat(
+        'ContosoSales/',
         formatDateTime(
             convertFromUtc(
                 utcnow(), 'Central Standard Time'
             ),
             'yyyy/MM/dd'
-        ),
-        '/ContosoSales'
+        )
     )
     ```
 
@@ -291,6 +291,14 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Switch conditional path](./Media/foreach-condition-switch.png)
 
+1. ⭐ [**Optional**] With the pipeline now created, select **Copilot** from the Home tab. In the Copilot pane, you can either select **Summarize this pipeline** or type a similar input into the text entry box before selecting the **Send** option. 
+
+    Copilot will then generate a human-readable summary of the created pipeline, which is particularly helpful for understanding complex pipelines or when collaborating with others to quickly grasp what the pipeline is doing with just a click of a button.
+
+    To close the Copilot pane, select the **X** once you're done exploring.
+
+    ![copilot-explanation](./Media/copilot-explanation.png)
+
 1. From the **Home** tab, select the **Validate** option to first confirm that there are no issues with your pipeline. This validation step helps in identifying any errors to be fixed before running the pipeline.
 
     Once validated, select the **Save** option and then **Run** to start the ingestion from the data pipeline. If a save window is prompted, confirm by selecting **Save and run**. Running the pipeline initiates the data transfer, allowing you to see the results of your configuration in action within the output window.
@@ -325,5 +333,5 @@ In this lab, we explored the process of creating dynamic data pipelines using Mi
 
 By moving data across the bronze and silver data lakehouse layers, we demonstrated how to manage and optimize data workflows. The use of delta parquet tables, optimized with v-Order, highlighted the importance of efficient data storage and retrieval for analytical workloads. These optimizations enhance performance, scalability, and overall productivity, enabling more effective data analysis and decision-making.
 
-- Continue to the [Dataflow Gen2](./DataPipeline.md) lab
+- Continue to the [Transforming and copying data](./DataPipeline.md) lab
 - Return to the [Data Factory in a Day](./README.md) homepage

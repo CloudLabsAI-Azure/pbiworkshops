@@ -34,7 +34,7 @@ In this lab, you will learn how to create a project task flow and understand the
 
 To start the lab, visit [Getting started](./GettingStarted.md)
 
-## Data pipeline
+## Orchestrating data movement
 
 In this lab you'll learn how to orchestrate your data movement, including creating dynamic expressions and conditional paths using Data Factory experiences.
 
@@ -42,14 +42,15 @@ In this lab you'll learn how to orchestrate your data movement, including creati
 1. Setting up conditional paths to handle different scenarios and ensure logical flow within your pipeline.
 1. Moving data between medallion layers, specifically the bronze and silver layers, to optimize data storage and retrieval for analysis.
 
-To start the lab, visit [Data pipeline](./DataPipeline.md)
+To start the lab, visit [Orchestrating data movement](./DataPipeline.md)
 
-## Dataflow Gen2
+## Transforming and copying data
 
 In this lab you'll learn about how to shape and orchestrate your data using Data Factory experiences.
 
 1. How to create a [Dataflow Gen2](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) to prepare and load data using Power Query Online.
 1. Understanding the [storage and compute staging](https://blog.fabric.microsoft.com/blog/data-factory-spotlight-dataflows-gen2?ft=Data-factory:category) architecture for large scale data transformations.
 1. Configuring [data destination outputs](https://learn.microsoft.com/fabric/data-factory/dataflow-gen2-data-destinations-and-managed-settings).
+1. How to create and configure a [Copy job](https://learn.microsoft.com/fabric/data-factory/what-is-copy-job) for a streamlined and user-friendly data ingestion process from source to destination.
 
-To start the lab, visit [Dataflow Gen2](./DataflowGen2.md)
+To start the lab, visit [Transforming and copying data](./DataflowGen2.md)
