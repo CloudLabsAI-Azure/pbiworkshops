@@ -42,7 +42,7 @@ In this lab you'll learn how to orchestrate your data movement, including creati
 1. Setting up conditional paths to handle different scenarios and ensure logical flow within your pipeline.
 1. Moving data between medallion layers, specifically the bronze and silver layers, to optimize data storage and retrieval for analysis.
 
-To start the lab, visit [Orchestrating data movement](./DataPipeline.md)
+To start the lab, visit [Orchestrating data movement](./Orchestration.md)
 
 ## Transforming and copying data
 
@@ -53,8 +53,4 @@ In this lab you'll learn about how to shape and orchestrate your data using Data
 1. Configuring [data destination outputs](https://learn.microsoft.com/fabric/data-factory/dataflow-gen2-data-destinations-and-managed-settings).
 1. How to create and configure a [Copy job](https://learn.microsoft.com/fabric/data-factory/what-is-copy-job) for a streamlined and user-friendly data ingestion process from source to destination.
 
-<<<<<<< HEAD
-To start the lab, visit [Transforming and copying data](./DataflowGen2.md)
-=======
-To start the lab, visit [Dataflow Gen2](./DataflowGen2.md)
->>>>>>> e9c14dc2d7a670e77739d460565dc444edf09cce
+To start the lab, visit [Transforming and copying data](./Transformation.md)
