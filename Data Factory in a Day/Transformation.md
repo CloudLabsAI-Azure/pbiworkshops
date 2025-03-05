@@ -321,13 +321,17 @@
 
     ![Invoke createContosoTables pipeline](./Media/get-contoso-sample-invoke-settings.png)
 
-1. With the invoke pipeline activity still selected, go to the **General** tab and update the activity **Name** to **Invoke createContosoTables**. Once complete, select the **Save** icon and then close the pipeline by selecting the **X** on the left side-rail to return to the workspace.
+1. With the invoke pipeline activity still selected, go to the **General** tab and update the activity **Name** to **Invoke createContosoTables**. Once complete, select the **Save** icon and then **Run**.
 
     **Note:** You can set a schedule from this first pipeline, and it will call the subsequent pipelines and its dataflow upon successful completion or have the pipeline triggered by events like when new files are added to the lakehouse.
 
-    ![Invoke createContosoTables pipeline](./Media/get-contoso-sample-general-name-close.png)
+    ![Invoke createContosoTables pipeline](./Media/get-contoso-sample-general-name-run.png)
 
     **Important:** Designing modular pipelines makes development, testing, and maintenance easier. They are also portable, allowing components to be reused across different projects. This approach is particularly beneficial in large-scale data processing environments, where reusability and modularization are key to efficient data integration workflows.
+
+1. From the Output pane monitor that the activities and **Succeedded** and once done close the pipeline by selecting the **X** on the left side-rail to return to the workspace.
+
+    ![Invoke succeeded and close](./Media/get-contoso-sample-general-succeeded-close.png)
 
 # Next steps
 
