@@ -119,6 +119,8 @@ We'll begin by navigating to a new, empty, or non-production workspace to check 
 
 1. If we return to our previously created **b_IADLake** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the **Holidays.csv** file has been added to the **Files** section. Selecting the file will allow you to get a preview of the data, ensuring that the data has been ingested correctly.
 
+    **Note:** If the contents are not yet visible, navigate to the Home tab and select the Refresh icon to start the metadata sync process and update the lakehouse viewer content.
+
     ![Copy output succeeded](./Media/lakehouse-files-holidays.png)
 
 ### Pipeline expression builder
@@ -166,6 +168,8 @@ We'll begin by navigating to a new, empty, or non-production workspace to check 
     ![Copy output succeeded](./Media/copy-output-succeeded.png)
 
 1. If we return to our previously created **b_IADLake** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the **Holidays.csv** file has now been added to the Files section with a nested folder structure based on the year, month, and date of the run. This confirmation step ensures that the dynamic file output is working as intended and that your data is being organized correctly.
+
+    **Note:** If the contents are not yet visible, navigate to the Home tab and select the Refresh icon to start the metadata sync process and update the lakehouse viewer content.
 
     ![Copy output succeeded](./Media/dynamic-nested-folder.png)
 
