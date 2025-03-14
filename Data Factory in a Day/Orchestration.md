@@ -169,7 +169,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![File directory variable](./Media/filedirectory-variable.png)
 
-1. With the Get metadata activity still selected, navigate to the **Settings** tab. Add new Field list values by selecting **New** twice. Within each of the drop-downs, configure the values as **Child items**. This ensures that the metadata activity retrieves information about the child items and their names within the specified directory.
+1. With the Get metadata activity still selected, navigate to the **Settings** tab. From the **Field list** select **New**. Within the drop-downs, configure the value as **Child items**. This ensures that the metadata activity retrieves information about the child items and their names within the specified directory.
 
     ![Get metadata field list](./Media/get-metadata-field-list.png)
 
