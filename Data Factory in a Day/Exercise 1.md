@@ -62,43 +62,43 @@ In this lab, you will learn how to create a project task flow and understand the
 
 ## Task 1.1: Medallion task flow
 
-1. To begin, from the empty workspace, select the option **Select a predefined task flow** to choose one of Microsoft's task flows. These predesigned task flows provide a structured approach to managing data projects, ensuring that best practices are followed and that the workflow is efficient and effective.
+1. To begin, from the empty workspace, select the option **Select a predefined task flow** to choose one of Microsoft's task flows. These predesigned task flows provide a structured approach to managing data projects.
 
-    ![Task flow selection](./Media/select-a-task-flow.png)
+    ![](./Media/23042025(19).png)
 
-1. From the **Select a task flow** window, choose the **Medallion** option. This option includes the description "Organize and improve data progressively as it moves through each layer," which is crucial for data projects. The medallion architecture helps in structuring data into different layers, such as bronze, silver, and gold, to enhance data quality and accessibility. Select the **Select** option to continue.
+1. In the **Select a predefined task flow** window, choose the **Medallion** option, which is described as "Organize and improve data progressively as it moves through each layer." Then, click **Select** to proceed.
 
-    ![Medallion selection](./Media/medallion-task-flow.png)
+    ![](./Media/23042025(20).png)
 
-1. A task flow has now been created within your workspace, which can be considered an architectural template. This template provides a structured framework for your data project. No items have been created yet, so select the **+ New item** option on the **Bronze data** task to start adding items to your task flow.
+1. A task flow has now been created within your workspace. Select **+ New item** option on the **Bronze data** task to start adding items to your task flow.
 
-    ![Bronze data new item](./Media/task-flow-new-item-bronze-data.png)
+    ![](./Media/23042025(21).png)
 
-1. Within the Create an item window, the available options within Microsoft Fabric have been filtered down to **Recommended items** only. This filtering is helpful for choosing the correct items for your project, ensuring that you select the most appropriate tools and resources. Select the **Lakehouse** item for your data storage.
+1. Within the Create an item window, the available options within Microsoft Fabric have been filtered down to **Recommended items** only. Select the **Lakehouse** item for your data storage.
 
-    ![Bronze data lakehouse](./Media/bronze-data-lakehouse.png)
+    ![](./Media/23042025(22).png)
 
-1. In the New lakehouse window, set the lakehouse name to **b_IADLake** (shorthand for bronze in a day) and then select **Create**. Naming conventions like this help in easily identifying and managing different components of your project.
+1. In the New lakehouse window, set the lakehouse name to **b_IADLake** (shorthand for bronze in a day) and then select **Create**.
 
-    ![Bronze data lakehouse](./Media/new-lakehouse-iad.png)
+    ![](./Media/23042025(23).png)
 
-1. A new lakehouse will be created for you. For now, return to the workspace by selecting the workspace name on the left side-rail. This step ensures that you can continue working on other aspects of your project while the lakehouse is being set up.
+1. A new lakehouse will be created. For now, return to the **Data Factory in a Day_<inject key="Deployment ID" enableCopy="false"/>** workspace by selecting the workspace name on the left side-rail.
 
-    ![Workspace selection](./Media/return-to-workspace.png)
+    ![](./Media/23042025(24).png)
 
-1. Within the workspace, you will notice that three items have now been created and are associated with your lakehouse. These items include the lakehouse (storage), SQL analytics endpoint, and a default Semantic model. As you continue to add more items to your projects and select different tasks, the workspace item view list will filter to show only those components associated with each task. This filtering helps you stay organized and focused on the relevant parts of your project.
+1. Within the workspace, you will notice that three items have now been created and are associated with your lakehouse. These items include the lakehouse (storage), SQL analytics endpoint, and a default Semantic model.
 
-    To proceed, select **+ New item** from the **High-volume data ingest** task. This task is crucial for handling large volumes of data efficiently, ensuring that your data ingestion processes are scalable and robust.
+    To proceed, click **+ New item** under the **High-volume data ingest** task. This step sets up the process for efficiently handling large volumes of data, ensuring your ingestion pipeline is both scalable and reliable.
 
-    ![Low volume new item](./Media/high-volume-new-item.png)
+    ![](./Media/23042025(25).png)
 
-1. Within the Create an item window, the available options within Microsoft Fabric have been filtered down to **Recommended items** only again. Select the **Data pipeline** item which is essential for automating the movement and transformation of data from various sources to destinations.
+1. Within the Create an item window, the available options within Microsoft Fabric have been filtered down to **Recommended items** only again. Select **Data pipeline**, which is a key component for streamlining the movement and transformation of data across various sources and destinations.
 
-    ![High volume data ingest](./Media/task-flow-new-item-high-volume.png)
+    ![](./Media/23042025(26).png)
 
 1. In the New pipeline window, set the data pipeline name to **samplePipeline** and then select **Create**.
 
-    ![Bronze data lakehouse](./Media/new-pipeline-sample.png)
+    ![](./Media/23042025(27).png)
 
 ## Task 1.2: Copy activity
 
