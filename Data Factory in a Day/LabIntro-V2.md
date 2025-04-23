@@ -92,7 +92,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](./Media/23042025(9).png)
 
-1. You will be able to view the Power BI Portal.
+1. You should be able to view the Power BI Portal.
 
    ![](./Media/23042025(10).png)
    
