@@ -20,15 +20,15 @@ The architecture for this lab involves the following key components:
 
 1. **Data Pipeline:** Used for ingesting and moving data between different stages in the architecture. It automates the extraction, loading, and initial processing of data.
 
-2. **Lakehouse (Bronze Layer):** This is the first landing zone for raw data. It stores unprocessed or minimally processed data collected from various sources.
+2. **Lakehouse (Bronze):** This is the first landing zone for raw data. It stores unprocessed or minimally processed data collected from various sources.
 
-3. **Lakehouse (Silver Layer):** The Silver layer contains data that has been cleaned, filtered, and structured. It serves as an intermediate stage, preparing data for advanced transformations.
+3. **Lakehouse (Silver):** The Silver layer contains data that has been cleaned, filtered, and structured. It serves as an intermediate stage, preparing data for advanced transformations.
 
 4. **Dataflows Gen2:** A low-code/no-code transformation tool used to shape, enrich, and transform data from the Lakehouse. Integrated with **Copilot**, it allows users to build dataflows more intuitively and efficiently.
 
-5. **Data Warehouse (Gold Layer):** The Gold layer is optimized for analytics. It stores fully transformed, business-ready data that supports reporting, dashboards, and decision-making.
+5. **Copy Job:** A tool or process used to transfer data from the Lakehouse Silver layer into the Data Warehouse Gold layer when needed.
 
-6. **Copy Job:** A tool or process used to transfer data from the Lakehouse Silver layer into the Data Warehouse Gold layer when needed.
+6. **Data Warehouse (Gold):** The Gold layer is optimized for analytics. It stores fully transformed, business-ready data that supports reporting, dashboards, and decision-making.
 
 7. **Power BI:** A business intelligence tool used to visualize and analyze data. It connects to the Data Warehouse to create interactive reports and dashboards for end users.
 
