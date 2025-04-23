@@ -6,6 +6,10 @@
         {
           "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/pbiworkshops/refs/heads/main/Data%20Factory%20in%20a%20Day/LabIntro-V2.md",
           "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/pbiworkshops/refs/heads/main/Data%20Factory%20in%20a%20Day/Exercise%201.md",
+          "Order": 2
         }
       ]
     }
