@@ -40,7 +40,7 @@ Welcome to your Data Factory in a Day with Microsoft Fabric workshop! We've prep
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![](./media/1.png)
+![](./Media/23042025(2).png)
 
 ### Virtual Machine & Lab Guide
  
@@ -50,57 +50,51 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![](./media/2.png)
+![](./Media/23042025(3).png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![](./media/3.png)
+![](./Media/23042025(4).png)
  
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![](./media/4.png)
+![](./Media/23042025(5).png)
 
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![](media/labzoom-1.png)
+![alt text](image-1.png)
 
 ## Let's Get Started with Power BI Portal
  
-1. On your virtual machine, click on the Power BI Portal icon as shown below:
+1. On your virtual machine, click on the **Power BI Portal** icon as shown below:
  
-   ![](./media/7.png)
+   ![](./Media/23042025(6).png)
 
-2. On the **Sign in to Microsoft Azure** tab you will see the login screen, in that enter the following email/username, and click on **Next**.
+2. On the **Enter your email, we'll check if you need to create a new account** tab you will see the login screen, in that enter the following email/username, and click on **Submit**.
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-     ![](./media/8.png)
+     ![](./Media/23042025(7).png)
  
 3. Now enter the following password and click on **Sign in**.
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-     ![](./media/9.png)
- 
-1. If you see the pop-up Action Required, click Ask Later.
-
-   ![](media/asklater.png)
-
-   >**NOTE:** Do not enable MFA, select **Ask Later**.
+     ![](./Media/23042025(8).png)
      
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
-   ![](media/Sign-in-no.png)
+   ![](./Media/23042025(9).png)
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+1. You will be able to view the Power BI Portal.
 
-1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
+   ![](./Media/23042025(10).png)
    
 ## Support Contact
  
@@ -112,6 +106,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
  
-   ![](./media/10.png)
+![alt text](image.png)
 
 ### Happy Learning!!
