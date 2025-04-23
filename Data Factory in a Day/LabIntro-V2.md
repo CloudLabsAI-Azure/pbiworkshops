@@ -1,4 +1,4 @@
-# Data Factory in a Day with Microsoft Fabric
+# Microsoft Fabric - Data Factory in a Day
 
 ### Overall Estimated Duration: 4 Hours
 
