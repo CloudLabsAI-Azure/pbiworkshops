@@ -165,7 +165,6 @@ In this lab, you will learn how to create a project task flow and understand the
 
 1. We want to make the output of our file from the pipeline dynamic to a new folder location based on the current date of execution. To start, delete the existing **Holidays.csv** file from our lakehouse by selecting the **ellipses** (**...**) and then the **Delete** option. This step ensures that we have a clean slate for our new dynamic file output.
 
-
     ![](./Media/23042025(41).png)
 
 1. A confirmation window will be displayed. Select **Delete** to confirm the removal of the file.
