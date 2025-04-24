@@ -47,7 +47,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Copy data connection more option](./Media/source-connection-more.png)
 
-1. From the Get data navigator, select **+ New** from the left side-rail and then choose the **Http** connector. The Http connector allows you to connect to web-based data sources, providing flexibility in accessing data from various online resources.
+1. From the Get data navigator, select **+ New** from the left side-rail and then choose the **Http** connector. The `Http` connector allows you to connect to web-based data sources, providing flexibility in accessing data from various online resources.
 
     ![Get data http](./Media/get-data-http.png)
 
@@ -77,7 +77,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Destination lakehouse](./Media/destination-files-directory.png)
 
-1. In the Pipeline expression builder window, select the **Functions** tab. Here, you can explore various functions that exist within the expression library, in this example we'll use both date and string functions to create a dynamic folder path. When you're ready, copy and paste the code block below into the expression input box. Press **OK** when complete.
+1. In the Pipeline expression builder window, select the **Functions** tab. Here, you can explore various functions that exist within the expression library. In this example, we'll use both date and string functions to create a dynamic folder path. When you're ready, copy and paste the code block below into the expression input box. Press **OK** when complete.
 
     ```text
     @concat(
@@ -154,7 +154,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 1. Select the **Value** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
 
-    In the Pipeline expression builder window copy and paste the code block below into the expression input box. Press **OK** when complete.
+    In the Pipeline expression builder window, copy and paste the code block below into the expression input box. Press **OK** when complete.
 
     ```text
     @concat(
@@ -214,7 +214,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     With the **ForEach** activity selected, navigate to the **General** tab and update the **Name** field with the text **For each file**.
 
-    Next, create a conditional path by dragging and dropping the **On success** option between the **Get items in folder activity** and the **For each file activity**. This step establishes a logical flow in your pipeline, ensuring that the ForEach retrieval occurs only after the file directory has been successfully completed.
+    Next, create a conditional path by dragging and dropping the **On success** option between the **Get items in folder activity** and the **For each file activity**. This step establishes a logical flow in your pipeline, ensuring that the ForEach retrieval occurs only after the file directory has been successfully created.
 
     ![Output window file names](./Media/foreach-conditional-path-name.png)
 
@@ -222,7 +222,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Output item name](./Media/23042025(54).png)
 
-1. Within the Pipeline expression builder window, select the **Activity outputs** section. Then, choose the **Get items in folder** output of **childItems**. The full option title is **Get items in folder childItems** and Select **OK**.
+1. Within the Pipeline expression builder window, select the **Activity outputs** section. Then, choose the **Get items in folder** output of **childItems**. The full option title is **Get items in folder childItems** and select **OK**.
 
     ![Output item name](./Media/get-child-items-output.png)
 
@@ -238,7 +238,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Update copy data activity name](./Media/for-each-copy-data-name.png)
 
-1. With the **Copy data** activity still selected, configure the following options in the **Source** tab. Once complete select the **Directory** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder :
+1. With the **Copy data** activity still selected, configure the following options in the **Source** tab. Once complete, select the **Directory** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder :
 
     | Property | Value |
     | :-- | :-- |
@@ -267,7 +267,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![For each settings](./Media/for-each-item-name.png)
 
-1. With the **Copy data** activity selected, configure the following options in the **Destination** tab. Once complete select the **Table** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
+1. With the **Copy data** activity selected, configure the following options in the **Destination** tab. Once complete, select the **Table** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
 
     | Property | Value |
     | :-- | :-- |
@@ -276,7 +276,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Destination configuration](./Media/for-each-destination-settings.png)
 
-1. Within the expression builder, we'll use the split function from the string functions group to split each item name based on the period delimiter "**.**" and then select the first item from the created array. Once complete select **OK** to continue.
+1. Within the expression builder, we'll use the split function from the string functions group to split each item name based on the period delimiter "**.**" and then select the first item from the created array. Once complete, select **OK** to continue.
 
     Copy and paste the code block below into the expression input box.
 
@@ -284,7 +284,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
     @split(item().name, '.')[0]
     ```
 
-    As an example DimCustomer.parquet would become ['DimCustomer','Parquet'] with two items in the returned array. To select the first item we use a zero based index to select the value DimCustomer.
+    As an example, DimCustomer.parquet would become ['DimCustomer','Parquet'] with two items in the returned array. To select the first item, we use a zero-based index to select the value DimCustomer.
 
     ![Table name splitter](./Media/for-each-table-name-split.png)
 
@@ -292,7 +292,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Table action](./Media/for-each-copy-table-action.png)
 
-1. Within the expression builder, we'll use the if condition from the logical functions group and the startswith function from the string functions group to determine if the string starts with the prefix of **Dim** for our dimension tables. If true, we'll set the value to **Overwrite**, if false **Append**. Once complete select **OK** to continue.
+1. Within the expression builder, we'll use the if condition from the logical functions group and the startswith function from the string functions group to determine if the string starts with the prefix of **Dim** for our dimension tables. If true, we'll set the value to **Overwrite**, if false, **Append**. Once complete, select **OK** to continue.
 
     Copy and paste the code block below into the expression input box.
 
