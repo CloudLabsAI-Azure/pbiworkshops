@@ -43,7 +43,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![New dataflow gen2 from warehouse](./Media/new-dataflow-gen2-from-warehouse.png)
 
-1. In the New Dataflow Gen2 window, enter the dataflow name **PrepContoso** and press enter.
+1. In the New Dataflow Gen2 window, enter the dataflow name **PrepContoso** and press enter key.
 
     ![Name the dataflow](./Media/23042025(55).png)
 
@@ -72,49 +72,49 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
 ## Task 3: Preparing data using Power Query Online
 
-1. Select the **DimCustomer** table and from the **Home** tab, navigate to the **Merge queries** option and select **Merge queries as new**.
+1. Select the **DimCustomer (1)** table and from the **Home (2)** tab, navigate to the **Combine (3) -> Merge queries (4)** option and select **Merge queries as new (5)**.
 
-    ![Merge dim customer](./Media/merge-dimcustomer.png)
+    ![Merge dim customer](./Media/23042025(57).png)
 
-1. From the Merge query window, set the **Right table for merge** to **DimGeography**. In the top right corner, select the lightbulb which has detected a possible column match. In this example, both tables contain a column titled **GeographyKey**. Select this option to set the columns to be merged on. For the join kind, select **Inner** and then **OK** to proceed.
+1. From the Merge query window, set the **Right table for merge** to **DimGeography**. In the top right corner, select the lightbulb which has detected a possible column match. In this example, both tables contain a column titled **GeographyKey**. Select this option to set the columns to be merged on. For the Join kind, select **Inner** and then **OK** to proceed.
 
-    ![Merge dim customer window](./Media/merge-dimcustomer-window.png)
-
-1. Navigate to the far right for the **DimCustomer** table and select the joined **DimGeography** table column's top right corner to expand the table, from the avaialble column selections deselect **GeographyKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
-
-    ![Expand DimGeography](./Media/merge-dimcustomer-expand.png)
+    ![Merge dim customer](./Media/23042025(58).png)
 
 1. On the right-hand side in the Query settings pane, update the **Name** of the query to be **DimCustomers**
 
-    ![Updated query name to DimCustomers](./Media/dimcustomers-rename.png)
+    ![Merge dim customer](./Media/23042025(59).png)
 
-1. Next, select the **DimProduct** table and from the **Home** tab, navigate to the **Merge queries** group and select **Merge queries as new**.
+1. Navigate to the far right for the **DimCustomers** table and select the joined **DimGeography** table column's top right corner to expand the table, from the avaialble column selections deselect **GeographyKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
 
-    ![Merge dimproduct](./Media/merge-dimproduct.png)
+    ![Expand DimGeography](./Media/merge-dimcustomer-expand.png)
 
-1. From the Merge query window, set the **Right table for merge** to **DimProductSubcategory**. In the top right corner, select the lightbulb which has detected a possible column match. In this example, both tables contain a column titled **ProductSubcategoryKey**. Select this option to set the columns to be merged on. For the join kind, select **Inner** and then **OK** to proceed.
+1. Next, select the **DimProduct** table and from the **Home** tab, navigate to the **Combine -> Merge queries** option and select **Merge queries as new**.
 
-    ![Merge dimproductsubcategory](./Media/merge-dimproduct-dimproductsubcategory.png)
+    ![Merge dim customer](./Media/23042025(60).png)
 
-1. Navigate to the far right fo the **DimProduct** table and select the joined **DimProductSubcategory** table column's top right corner to expand the table, from the avaialble column selections deselect **ProductSubCategoryKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
+1. From the Merge query window, set the **Right table for merge** to **DimProductSubcategory**. In the top right corner, select the lightbulb which has detected a possible column match. In this example, both tables contain a column titled **ProductSubcategoryKey**. Select this option to set the columns to be merged on. For the Join kind, select **Inner** and then **OK** to proceed.
+
+    ![Merge dim customer](./Media/23042025(61).png)
+
+1. Navigate to the far right fo the **Merge** Queries and select the joined **DimProductSubcategory** table column's top right corner to expand the table, from the avaialble column selections **deselect** **ProductSubCategoryKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
 
     ![Expand dimproductsubcategory](./Media/merge-dimproduct-expand-dimproductsubcategory.png)
 
-1. Select the **Merge** query and from the **Home** tab, navigate to the **Merge queries** group and select **Merge queries**.
+1. Select the **Merge** query and from the **Home** tab, navigate to the **Combine -> Merge queries** option and select **Merge queries**.
 
-    ![Merge another table to DimCustomer](./Media/merge-mergequeries.png)
+    ![Merge dim customer](./Media/23042025(62).png)
 
 1. From the Merge query window, set the **Right table for merge** to **DimProductCategory**. In the top right corner, select the lightbulb which has detected a possible column match. In this example, both tables contain a column titled **ProductCategoryKey**. Select this option to set the columns to be merged on. For the join kind, select **Inner** and then **OK** to proceed.
 
-    ![Merge dimproductcategory](./Media/merge-dimproduct-dimproductcategory.png)
-
-1. Navigate to the far right for the **DimProduct** table and select the joined **DimProductCategory** table column's top right corner to expand the table, from the avaialble column selections deselect **ProductCategoryKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
-
-    ![Expand dimproductcategory](./Media/merge-dimproduct-expand-dimproductcategory.png)
+    ![Merge dim customer](./Media/23042025(63).png)
 
 1. On the right-hand side in the Query settings pane, update the **Name** of the query to be **DimProducts**
 
     ![Updated query name to DimProducts](./Media/dimproducts-rename.png)
+
+1. Navigate to the far right for the **DimProducts** table and select the joined **DimProductCategory** table column's top right corner to expand the table, from the avaialble column selections deselect **ProductCategoryKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
+
+    ![Expand dimproductcategory](./Media/merge-dimproduct-expand-dimproductcategory.png)
 
 ## Task 4: Outputting data to the warehouse destination
 
