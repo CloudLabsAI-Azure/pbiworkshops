@@ -136,36 +136,40 @@ In this lab, you will learn how to create a project task flow and understand the
 
 ## Task 2: Authoring canvas
 
-1. Within the authoring canvas, select the **Copy data** activity. Below, you will find the properties section where you can review the Source, Destination, Settings, and more. This section allows you to edit their configurations directly, ensuring that your data copy activity is set up correctly and tailored to your specific needs.
+1. Within the authoring canvas, select the **Copy data** activity. Below, you will find the properties section where you can review the Source, Destination, Settings, and more. This allows you to edit their configurations directly, ensuring that your data copy activity is set up correctly and tailored to your specific needs.
 
-    ![Authoring canvas activity](./Media/authoring-canvas-activity.png)
+    ![](./Media/23042025(36).png)
 
-1. Next, from the **Home** tab on the ribbon, select the **Validate** option. This step is important to ensure that the complete contents of your pipeline (in this sample, just the Copy activity) are valid. In the Pipeline validation output window, you should see the confirmation message "Your pipeline has been validated. No errors were found." This validation step helps you catch any potential issues before running the pipeline.
+1. From the **Home (1)** tab, click **Validate (2)** to check your pipeline for errors. If everything is set up correctly, you'll see the message: *"Your pipeline has been validated. No errors were found."* This step helps catch any issues before running the pipeline.
 
-    Select the **Run** option to start the pipeline and begin your data ingestion process. Running the pipeline initiates the data transfer from the source to the destination.
+    Select the **Run (3)** option to start the pipeline and begin your data ingestion process. Running the pipeline initiates the data transfer from the source to the destination.
 
-    ![Validate pipeline and run](./Media/pipeline-validate-run.png)
+    ![](./Media/23042025(37).png)
+
+    >**Note:** A new window will prompt you as unsaved changes have been detected. Select **Save and run** to continue.
+
+    ![](./Media/23042025(38).png)
 
 1. Deselect any previously selected activities within the authoring canvas. The global properties and **Output** view will then become visible. After starting the run of your pipeline, both the **Pipeline status** and the **Activity status** should show a **Succeeded** status. This indicates that everything ran as intended, confirming that your data ingestion process was successful.
 
-    ![Copy output succeeded](./Media/copy-output-succeeded.png)
+    ![](./Media/23042025(39).png)
 
-1. If we return to our previously created **b_IADLake** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the **Holidays.csv** file has been added to the **Files** section. Selecting the file will allow you to get a preview of the data, ensuring that the data has been ingested correctly.
+1. If we return to our previously created **b_IADLake (1)** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the **Holidays.csv (3)** file has been added to the **Files (2)** section. Selecting the file will allow you to get a preview of the data, ensuring that the data has been ingested correctly.
 
     >**Note:** If the contents are not yet visible, navigate to the Home tab and select the Refresh icon to start the metadata sync process and update the lakehouse viewer content.
 
-    ![Copy output succeeded](./Media/lakehouse-files-holidays.png)
+    ![](./Media/23042025(40).png)
 
 ## Task 2.1: Pipeline expression builder
 
-1. We want to make the output of our file from the pipeline dynamic to a new folder location based on the current date of execution. To start, delete the existing **Holidays.csv** file from our lakehouse by selecting the ellipses (**...**) and then the **Delete** option. This step ensures that we have a clean slate for our new dynamic file output.
+1. We want to make the output of our file from the pipeline dynamic to a new folder location based on the current date of execution. To start, delete the existing **Holidays.csv** file from our lakehouse by selecting the **ellipses** (**...**) and then the **Delete** option. This step ensures that we have a clean slate for our new dynamic file output.
 
 
-    ![Delete holidays](./Media/holidays-delete-file.png)
+    ![](./Media/23042025(41).png)
 
 1. A confirmation window will be displayed. Select **Delete** to confirm the removal of the file.
 
-    ![Delete holidays confirm](./Media/holidays-delete-confirm.png)
+    ![](./Media/23042025(42).png)
 
 1. Return to our previously created **samplePipeline** data pipeline item. You can do this either by selecting it on the left side rail if it is still open or by returning to the workspace item list to open it. This step brings you back to the pipeline where we will make the necessary changes to create an expression for a dynamic file output.
 
