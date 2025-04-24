@@ -106,7 +106,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
 1. From the Merge query window, set the **Right table for merge** to **DimProductCategory**. In the top right corner, select the lightbulb which has detected a possible column match. In this example, both tables contain a column titled **ProductCategoryKey**. Select this option to set the columns to be merged on. For the join kind, select **Inner** and then **OK** to proceed.
 
-    ![Merge dim customer](./Media/23042025(63).png)
+    ![Merge dim customer](./Media/23042025(65).png)
 
 1. On the right-hand side in the Query settings pane, update the **Name** of the query to be **DimProducts**
 
@@ -118,7 +118,15 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
 ## Task 4: Outputting data to the warehouse destination
 
-1. Select the **FactOnlineSales** query and from the **Home** tab, select **Add data destination** and then choose the **Warehouse** option.
+1. Begin by removing the default data destination. Select the **FactOnlineSales (1)** query, On the **Home** tab, click on **Default data destination (2)**, and then select **Remove (3)**.
+
+    ![Merge dim customer](./Media/23042025(64).png)
+
+1. On Remove default data destination dialog opens. Select **Remove**.
+
+    ![Merge dim customer](./Media/23042025(66).png)
+
+1. Select the **FactOnlineSales** query again and from the **Home** tab, select **Add data destination** and then choose the **Warehouse** option.
 
     ![Add warehouse destination](./Media/add-warehouse-destination.png)
 
