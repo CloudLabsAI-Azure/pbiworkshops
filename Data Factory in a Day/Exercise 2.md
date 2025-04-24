@@ -18,9 +18,9 @@ In this lab, we will guide you through the process of creating a comprehensive d
 
 Throughout the lab, you will validate and run the pipeline, ensuring that the data ingestion process is successful and that the data is organized correctly in the lakehouse. By the end of this lab, you will have a solid understanding of how to efficiently manage a data ingestion workflow.
 
-## Task 1: Create a Data Pipeline and Set Up Data Copy from Web to Lakehouse
+# Task 1: Create a Data Pipeline and Set Up Data Copy from Web to Lakehouse
 
-### Task 1.1: Create a data pipeline
+## Task 1.1: Create a data pipeline
 
 1. In the Fabric portal, open the previously created workspace named **Data Factory in a Day_<inject key="Deployment ID" enableCopy="false"/>**. This is where you built the lakehouse and sample data pipeline.
 
@@ -36,7 +36,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Bronze data lakehouse](./Media/new-pipeline-name-getcontososample.png)
 
-### Task 1.2: Creating a data connection
+## Task 1.2: Creating a data connection
 
 1. From the new and empty data pipeline, select the **Pipeline activity** watermark option and then choose **Copy data** to add this activity to the authoring canvas.
 
@@ -58,7 +58,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Contoso sample connection](./Media/contoso-sample-connection.png)
 
-### Task 1.3: Copy activity settings
+## Task 1.3: Copy activity settings
 
 1. With the **Copy data** activity selected and the **Source** tab displayed, select the **Settings** option next to the File format field. Within the **Compression type** setting, choose **ZipDeflate (.zip)** and select **OK** to complete.
 
@@ -119,9 +119,9 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Copy output succeeded](./Media/unzip-lakehouse-contents.png)
 
-## Task 2: Enriching raw data
+# Task 2: Enriching raw data
 
-### Task 2.1: Creating and using variables
+## Task 2.1: Creating and using variables
 
 1. Select the **New item** option on the **Silver data** from your task flow to add another storage item to your project. Within the **Item type** selection, select **Lakehouse**.
 
@@ -319,7 +319,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Validate save and run the pipeline](./Media/final-pipeline-monitor.png)
 
-## Task 3: Attach data pipeline to task flow
+# Task 3: Attach data pipeline to task flow
 
 1. Return to the **Data Factory in a Day_<inject key="Deployment ID" enableCopy="false"/>** workspace by selecting the workspace name on the left side-rail.
 
