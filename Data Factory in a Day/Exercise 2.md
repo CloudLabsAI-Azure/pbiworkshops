@@ -50,7 +50,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Get data http](./Media/get-data-http.png)
 
-1. Paste the following sample Zip file address from GitHub into the **Url** path. Optionally, you can also set the **Connection name** property to something more discoverable for future use, such as "ContosoSample." Naming your connections helps in easily identifying and managing different data sources within your project. Once complete, select **Connect** to establish the connection.
+1. Paste the following sample Zip file address from GitHub into the **Url** path. Optionally, you can also set the **Connection name** property to something more discoverable for future use, such as **ContosoSample** Naming your connections helps in easily identifying and managing different data sources within your project. Once complete, select **Connect** to establish the connection.
 
     ```text
     https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/ContosoSales.zip
@@ -96,7 +96,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Destination folder](./Media/copy-behavior-preserve.png)
 
-1. Navigate to the General tab with the Copy data activity selected. Update the **Name** and **Description** fields with the appropriate text. This step helps in identifying and managing the activity within your pipeline, making it easier to understand its purpose and functionality.
+1. Navigate to the General tab with the Copy data activity selected. Update the **Name** and **Description** fields with the appropriate text.
 
     | Property | Text |
     | :-- | :-- |
@@ -127,17 +127,15 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Bronze data new item](./Media/task-flow-new-item-silver-data.png)
 
-1. In the New lakehouse window, set the lakehouse name to "s_IADLake" (shorthand for silver in a day) and then select **Create**. Consistentcy in naming conventions like this help in easily identifying and managing different storage layers in your project.
+1. In the New lakehouse window, set the lakehouse name to **s_IADLake** (shorthand for silver in a day) and then select **Create**.
 
     ![Bronze data lakehouse](./Media/new-lakehouse-siad.png)
 
-1. Within the lakehouse item from the **Home** tab select **Get data** from **New data pipeline**.
+1. Within the lakehouse item from the **Home** tab select **Get data -> New data pipeline**.
 
     ![New data pipleine from lakehouse](./Media/new-data-pipeline-from-lakehouse.png)
 
-1. In the New pipeline window, set the data pipeline name to **createContosoTables** and then select Create. This step initializes your pipeline and gives it a meaningful name that reflects its purpose.
-
-    If prompted with the Copy data assistant window, select X in the top right corner to be taken into an empty authoring canvas. This ensures that you start with a clean slate for your pipeline configuration.
+1. In the New pipeline window, set the data pipeline name to **createContosoTables** and then select **Create**.
 
     ![Create Contoso tables pipeline](./Media/create-contoso-tables.png)
 
@@ -145,11 +143,11 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Create Contoso tables](./Media/add-set-variable-activity.png)
 
-1. With the **Set variable** activity selected, navigate to the **Settings** tab. Next to the **Name** property, select **New**. This step allows you to create a new variable that will be used in your pipeline.
+1. With the **Set variable** activity selected, navigate to the **Settings** tab. Next to the **Name** property, select **+ New**. This step allows you to create a new variable that will be used in your pipeline.
 
     ![Set new variable name](./Media/set-variable-new-name.png)
 
-1. Within the Add new variable window, set the **Name** value to **fileDirectory** and ensure the Type remains as a string before selecting Confirm. Naming your variable helps in identifying its purpose and ensures that it is correctly referenced in subsequent steps.
+1. Within the Add new variable window, set the **Name** value to **fileDirectory** and ensure the Type remains as a **String** before selecting **Confirm**.
 
     ![Create a new variable](./Media/new-variable-name.png)
 
@@ -171,7 +169,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Create Contoso tables](./Media/new-variable-expression-folder.png)
 
-1. Navigate to the General tab with the Set variable activity selected. Update the **Name** field with the text "**Set file directory**". This step helps in identifying and managing the activity within your pipeline in subsequent steps, making it easier to understand its purpose and functionality.
+1. Navigate to the General tab with the Set variable activity selected. Update the **Name** field with the text **Set file directory**.
 
     ![Set variable name](./Media/set-file-directory-name.png)
 
@@ -179,19 +177,19 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     Next, within the **Settings** options, set the **Connection** to **b_IADLake** from the available connection options.
 
-    Choose the **Files** option and then click on the **Directory** file path text input box. This will display the Add dynamic content [Alt+Shift+D] property. Click on this text to open the pipeline expression builder.
+    Choose the **Files** option and then click on the **Directory** file path text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Click on this text to open the pipeline expression builder.
 
     ![Add get metadata activity](./Media/add-get-metadata-activity.png)
 
-1. In the Pipeline expression builder window, select the **Variables** option. Within the available variable list, select **fileDirectory** and then OK. This step ensures that the file path for the metadata retrieval is dynamically set based on the value of the fileDirectory variable.
+1. In the Pipeline expression builder window, select the **Variables** option. Within the available variable list, select **fileDirectory** and then **OK**.
 
     ![File directory variable](./Media/filedirectory-variable.png)
 
-1. With the Get metadata activity still selected, navigate to the **Settings** tab. From the **Field list** select **New**. Within the drop-downs, configure the value as **Child items**. This ensures that the metadata activity retrieves information about the child items and their names within the specified directory.
+1. With the Get metadata activity still selected, navigate to the **Settings** tab. From the **Field list** select **+ New**. Within the drop-downs, configure the value as **Child items**. This ensures that the metadata activity retrieves information about the child items and their names within the specified directory.
 
     ![Get metadata field list](./Media/get-metadata-field-list.png)
 
-1. Next, navigate to the General tab with the Get metadata activity selected. Update the **Name** field with the text "**Get items in folder**". This step helps in identifying and managing the activity within your pipeline, making it easier to understand its purpose and functionality.
+1. Next, navigate to the **General** tab with the Get metadata activity selected. Update the **Name** field with the text **Get items in folder**.
 
     ![Get items in folder name](./Media/get-child-items-in-folder.png)
 
@@ -207,47 +205,45 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     From the **Get items in folder** activity, select the last column called **Output** to review the contents of the activity. This step allows you to verify that the filenames from your directory have been correctly retrieved and included in the output.
 
-    Of note, the output contains two keys one for **name** and another for **type** which we will access in the next portion of the tutorial.
-
     ![Output window file names](./Media/output-window-filenames.png)
 
 ## Task 2.2: ForEach loop and conditional branches
 
 1. Select the **Activities** tab and then the **ForEach** activity to add this to your canvas. This activity allows you to iterate over a collection of items, performing a set of actions for each item in the collection.
 
-    With the **ForEach** activity selected, navigate to the General tab and update the **Name** field with the text **For each file**. Naming your activities helps in identifying their purpose and makes it easier to manage your pipeline.
+    With the **ForEach** activity selected, navigate to the **General** tab and update the **Name** field with the text **For each file**.
 
     Next, create a conditional path by dragging and dropping the **On success** option between the **Get items in folder activity** and the **For each file activity**. This step establishes a logical flow in your pipeline, ensuring that the ForEach retrieval occurs only after the file directory has been successfully completed.
 
     ![Output window file names](./Media/foreach-conditional-path-name.png)
 
-1. With the For each file activity still active, navigate to the **Settings** tab. Select the **Items** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder. The sequential order ensures that the items are processed one after another, maintaining the order of execution.
+1. With the For each file activity still active, navigate to the **Settings** tab. Select the **Items** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
 
     ![Output item name](./Media/foreach-settings.png)
 
-1. Within the Pipeline expression builder window, select the **Activity outputs** section. Then, choose the **Get items in folder** output of **childItems**. The full option title is **Get items in folder childItems**. This step ensures that the ForEach activity iterates over the child items retrieved from the specified directory.
+1. Within the Pipeline expression builder window, select the **Activity outputs** section. Then, choose the **Get items in folder** output of **childItems**. The full option title is **Get items in folder childItems** and Select **OK**.
 
     ![Output item name](./Media/get-child-items-output.png)
 
-1. Selct the add option on the For each activity and then select **Copy data**. This step will allow us to repeatedly execute the copy data activity for each item in the array.
+1. Selct the **+ option** on the For each activity and then select **Copy data**. This step will allow us to repeatedly execute the copy data activity for each item in the array.
 
     ![For each copy data](./Media/for-each-copy-data.png)
 
-1. Select the **Edit** option on the For each activity to drill into the nested authoring canvas. This step allows you to configure the activities that will be executed for each item in the collection.
+1. Select the **Edit** option on the For each activity to drill into the nested authoring canvas.
 
     ![Nested authoring edit](./Media/foreach-nested-edit.png)
 
-1. Navigate to the General tab with the Copy data activity selected. Update the **Name** field with the text "**Copy tables**". This step helps in identifying and managing the activity within your pipeline, making it easier to understand its purpose and functionality.
+1. Navigate to the **General** tab with the Copy data activity selected. Update the **Name** field with the text **Copy tables**.
 
     ![Update copy data activity name](./Media/for-each-copy-data-name.png)
 
-1. With the **Copy data** activity still selected, configure the following options in the **Source** tab. Once complete select the **Directory** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder. :
+1. With the **Copy data** activity still selected, configure the following options in the **Source** tab. Once complete select the **Directory** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder :
 
     | Property | Value |
     | :-- | :-- |
-    | Source | Select the previously configured **b_IADLake** lakehouse. |
+    | Connection | Select the previously configured **b_IADLake** lakehouse. |
     | Root folder | Files |
-    | File path | File path |
+    | File path | Select Add dynamic content [Alt+Shift+D] |
     | File format | Parquet |
 
     ![For each settings](./Media/for-each-source-settings.png)
@@ -260,7 +256,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![For each file name](./Media/for-each-file-name.png)
 
-1. Select the item **For each file** within the expression builder's ForEach iterator section. Within the expression builder, add the suffix ".name" to access the name property of the current items array and then **OK** to continue once complete.
+1. Select the item **For each file** within the expression builder's ForEach iterator section. Within the expression builder, add the suffix **.name** to access the name property of the current items array and then **OK** to continue once complete.
 
     Copy and paste the code block below into the expression input box.
 
@@ -274,8 +270,8 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     | Property | Value |
     | :-- | :-- |
-    | Source | Select the previously configured **s_IADLake** lakehouse. |
-    | Destination | Tables |
+    | Connection | Select the previously configured **s_IADLake** lakehouse. |
+    | Root folder | Tables |
 
     ![Destination configuration](./Media/for-each-destination-settings.png)
 
@@ -313,33 +309,21 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Switch conditional path](./Media/foreach-condition-switch.png)
 
-1. ⭐ [**Optional**] With the pipeline now created, select **Copilot** from the Home tab. In the Copilot pane, you can either select **Summarize this pipeline** or type a similar input into the text entry box before selecting the **Send** option. 
-
-    Copilot will then generate a human-readable summary of the created pipeline, which is particularly helpful for understanding complex pipelines or when collaborating with others to quickly grasp what the pipeline is doing with just a click of a button.
-
-    To close the Copilot pane, select the **X** once you're done exploring.
-
-    ![copilot-explanation](./Media/copilot-explanation.png)
-
 1. From the **Home** tab, select the **Validate** option to first confirm that there are no issues with your pipeline. This validation step helps in identifying any errors to be fixed before running the pipeline.
 
     Once validated, select the **Save** option and then **Run** to start the ingestion from the data pipeline. If a save window is prompted, confirm by selecting **Save and run**. Running the pipeline initiates the data transfer, allowing you to see the results of your configuration in action within the output window.
 
     ![Validate save and run the pipeline](./Media/final-pipeline-run.png)
 
-1. The data pipeline is now running multiple activities in a sequential order and writing these to the Silver data layers lakehouse as delta parquet tables. These tables are optimized for analysis, providing several benefits for data processing and querying.
-
-    v-Order optimized tables are crucial for analysis in Microsoft Fabric because they enhance performance and efficiency. By organizing data in a columnar format, v-Order tables allow for faster data retrieval and reduced storage costs. This optimization is particularly beneficial for analytical workloads, where large volumes of data need to be processed and queried quickly. Additionally, delta parquet tables support efficient data updates and versioning, making it easier to manage and analyze evolving datasets.
-
-    By leveraging v-Order optimized tables, you can ensure that your data is stored in a way that maximizes performance and scalability, enabling more effective and timely analysis. This approach helps in making informed decisions based on up-to-date and well-organized data.
+1. Deselect any previously selected activities within the authoring canvas. The global properties and **Output** view will then become visible. After starting the run of your pipeline, both the **Pipeline status** and the **Activity status** should show a **Succeeded** status.
 
     ![Validate save and run the pipeline](./Media/final-pipeline-monitor.png)
 
 ## Task 3: Attach data pipeline to task flow
 
-1. Return to the workspace by selecting the workspace name on the left side-rail. This step ensures that you can continue working on other aspects of your project while the lakehouse is being set up.
+1. Return to the **Data Factory in a Day_<inject key="Deployment ID" enableCopy="false"/>** workspace by selecting the workspace name on the left side-rail.
 
-    ![Workspace selection](./Media/return-to-workspace.png)
+    ![](./Media/23042025(24).png)
 
 1. From the task flow select the **Initial process** task and the paper clip to assign a previously created item.
 
@@ -349,11 +333,12 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Attach initial process](./Media/attach-createcontosotables.png)
 
-# Next steps
+## Summary
 
-In this lab, we explored the process of creating dynamic data pipelines using Microsoft Fabric. Throughout the lab, we configured various activities, including setting variables, retrieving metadata, and using the ForEach and Switch activities to handle different scenarios. We also learned how to validate and run the pipeline, ensuring that the data ingestion process is successful and that the data is correctly organized in the lakehouse.
+In this lab, you explored how to build dynamic data pipelines using Microsoft Fabric. You configured key activities like **Set Variable**, **Get Metadata**, **ForEach**, and **Switch** to handle various scenarios. You also validated and ran the pipeline to ensure successful data ingestion into the lakehouse.
 
-By moving data across the bronze and silver data lakehouse layers, we demonstrated how to manage and optimize data workflows. The use of delta parquet tables, optimized with v-Order, highlighted the importance of efficient data storage and retrieval for analytical workloads. These optimizations enhance performance, scalability, and overall productivity, enabling more effective data analysis and decision-making.
+By moving data through the **Bronze** and **Silver** layers, you learned how to manage and optimize data workflows. The **Silver layer** utilized **v-Order optimized Delta Parquet tables**, enhancing performance, scalability, and analytical efficiency—enabling better, faster decision-making.
 
-- Continue to the [Transforming and copying data](./Transformations.md) lab
-- Return to the [Data Factory in a Day](./README.md) homepage
+Now, click on **Next** from the lower right corner to move on to the next page.
+ 
+![alt text](image.png)
