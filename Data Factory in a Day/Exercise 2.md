@@ -12,6 +12,7 @@
     - Task 2.1: Creating and using variables
     - Task 2.2: ForEach loop and conditional branches
 - Task 3: Attach data pipeline to task flow
+- Summary
 
 ## Introduction
 In this lab, we will guide you through the process of creating a comprehensive data ingestion solution using data pipelines in Microsoft Fabric. We will start by setting up the copy activity to transfer data from a sample source to a dynamic destination within a lakehouse. This includes using the expression builder to create a dynamic folder structure based on the current date of execution.
@@ -22,7 +23,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 ## Task 1.1: Create a data pipeline
 
-1. In the Fabric portal, open the previously created workspace named **Data Factory in a Day_<inject key="Deployment ID" enableCopy="false"/>**. This is where you built the lakehouse and sample data pipeline.
+1. In the Fabric portal, open the previously created workspace named **Data Factory in a Day_<inject key="Deployment ID" enableCopy="false"/>**.
 
 2. Next, go to the **High-volume data ingest** task and select **+ New item** to continue.
 
@@ -76,7 +77,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Destination lakehouse](./Media/destination-files-directory.png)
 
-1. In the Pipeline expression builder window, select the **Functions** tab. Here, you can explore various functions that exist within the expression library, in this example we'll use both date and string functions to create a dynamic folder path. When you're ready, copy and paste the code block below into the expression input box. Press **Ok** when complete.
+1. In the Pipeline expression builder window, select the **Functions** tab. Here, you can explore various functions that exist within the expression library, in this example we'll use both date and string functions to create a dynamic folder path. When you're ready, copy and paste the code block below into the expression input box. Press **OK** when complete.
 
     ```text
     @concat(
@@ -153,7 +154,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 1. Select the **Value** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
 
-    In the Pipeline expression builder window copy and paste the code block below into the expression input box. Press **Ok** when complete.
+    In the Pipeline expression builder window copy and paste the code block below into the expression input box. Press **OK** when complete.
 
     ```text
     @concat(

@@ -9,6 +9,7 @@
     - Task 1.2: Copy activity
 - Task 2: Authoring canvas 
     - Task 2.1: Pipeline expression builder
+- Summary
 
 ## Introduction
 In this lab, you will learn how to create a project task flow and understand the basics of Data Factory experiences. This workshop is designed to provide you with hands-on experience in building and managing your solution using Microsoft Fabric. By the end of this lab, you will have a foundational understanding of key concepts and tools that are essential for efficient data management and transformation.
