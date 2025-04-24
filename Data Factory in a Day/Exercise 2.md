@@ -115,7 +115,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 1. If we return to our previously created **b_IADLake** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the zip file's content has now been added to the Files section. The files should be organized with a nested folder structure based on the data source title, year, month, and date of the pipeline run.
 
-    **Note:** If the contents are not yet visible, navigate to the Home tab and select the Refresh icon to start the metadata sync process and update the lakehouse viewer content.
+    >**Note:** If the contents are not yet visible, navigate to the Home tab and select the Refresh icon to start the metadata sync process and update the lakehouse viewer content.
 
     ![Copy output succeeded](./Media/unzip-lakehouse-contents.png)
 
