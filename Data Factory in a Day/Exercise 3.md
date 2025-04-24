@@ -43,8 +43,8 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![New dataflow gen2 from warehouse](./Media/new-dataflow-gen2-from-warehouse.png)
 
-1. In the New Dataflow Gen2 window, enter the dataflow name **PrepContoso** and press enter key.
-
+1. In the top-left corner of the **New Dataflow Gen2** window, rename the dataflow to **PrepContoso**, then press **Enter** to apply the change.
+    
     ![Name the dataflow](./Media/23042025(55).png)
 
 ## Task 2: Connecting to lakehouse tables
@@ -192,13 +192,9 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![New group data load description](./Media/data-load-group.png)
 
-1. From the **Home** tab, click the chevron below the **Save & run** option, and then select **Save**.
+1. Click **Publish** to save and apply the changes to the dataflow.
 
-    ![Save the dataflow](./Media/save-and-run-save.png)
-
-1. Hover over the dataflow on the left side-rail and select the **X** to close it.
-
-    ![Save the dataflow](./Media/close-multitasking-dataflow.png)
+    ![New group data load description](./Media/23042025(67).png)
 
 ## Task 6: Further transform task flow
 
@@ -214,7 +210,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![Attach PrepContoso](./Media/attach-prepcontoso-item.png)
 
-1. From the task flow, select the **Further transform** task and click on the **New item** option. Within the Create an item pane, display properties, change the toggle to the **All items** option.
+1. From the task flow, select the **Further transform** task and click on the **+ New item** option. Within the Create an item pane, display properties, change the toggle to the **All items** option.
 
     ![Further transform all items](./Media/further-transform-all-items.png)
 
