@@ -46,11 +46,11 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Copy data connection more option](./Media/source-connection-more.png)
 
-1. From the Get data navigator, select **Add** from the left side-rail and then choose the **Http** connector. The Http connector allows you to connect to web-based data sources, providing flexibility in accessing data from various online resources.
+1. From the Get data navigator, select **+ New** from the left side-rail and then choose the **Http** connector. The Http connector allows you to connect to web-based data sources, providing flexibility in accessing data from various online resources.
 
     ![Get data http](./Media/get-data-http.png)
 
-1. Paste the following sample Zip file address from GitHub into the **Url** path. Optionally, you can also set the **Connection name** property to something more discoverable for future use, such as **ContosoSample** Naming your connections helps in easily identifying and managing different data sources within your project. Once complete, select **Connect** to establish the connection.
+1. Paste the sample ZIP file URL from GitHub into the **URL** field, set the **Connection name** to **ContosoSample**, and select **Connect** to establish the connection.
 
     ```text
     https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/ContosoSales.zip
@@ -64,9 +64,9 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Contoso sample connection](./Media/zip-deflate-compression.png)
 
-1. Next, with the Copy data activity still selected and the Source tab displayed, expand the **Advanced** section. Deselect the option to **Preserve zip file name as folder**. This allows you to customize the folder name for your zip contents, providing more flexibility in organizing your data.
+1. Next, with the Copy data activity still selected and the Source tab displayed, expand the **Advanced** section. **Deselect** the option to **Preserve zip file name as folder**. This allows you to customize the folder name for your zip contents, providing more flexibility in organizing your data.
 
-    ![Deselect preserve zip file name](./Media/deselect-preserve-zip-file-name.png)
+    ![Deselect preserve zip file name](./Media/23042025(51).png)
 
 1. With the Copy data activity still selected, navigate to the **Destination** tab. From the list of connections, select the previously configured lakehouse **b_IADLake**. This step ensures that the data is being copied to the correct destination, which is essential for maintaining data integrity and organization.
 
@@ -103,7 +103,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
     | Name | Get and Unzip files |
     | Description | Copies sample data from GitHub and stores raw content in lakehouse files |
 
-    ![Copy data general descriptions](./Media/copy-data-general.png)
+    ![Copy data general descriptions](./Media/23042025(53).png)
 
 1. From the **Home** tab, select the **Validate** option to first confirm that there are no issues with your pipeline. This validation step helps in identifying any errors to be fixed before running the pipeline. Once validated, select the **Save** option and then **Run** to start the ingestion from the data pipeline. Running the pipeline initiates the data transfer, allowing you to see the results of your configuration in action within the output window.
 
@@ -123,9 +123,9 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 ## Task 2.1: Creating and using variables
 
-1. Select the **New item** option on the **Silver data** from your task flow to add another storage item to your project. Within the **Item type** selection, select **Lakehouse**.
+1. Navigate to previously created workspace named **Data Factory in a Day_<inject key="Deployment ID" enableCopy="false"/>**. Select the **+ New item** option on the **Silver data** from your task flow to add another storage item to your project. Within the **Item type** selection, select **Lakehouse**.
 
-    ![Bronze data new item](./Media/task-flow-new-item-silver-data.png)
+    ![Bronze data new item](./Media/23042025(52).png)
 
 1. In the New lakehouse window, set the lakehouse name to **s_IADLake** (shorthand for silver in a day) and then select **Create**.
 
@@ -219,7 +219,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 1. With the For each file activity still active, navigate to the **Settings** tab. Select the **Items** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
 
-    ![Output item name](./Media/foreach-settings.png)
+    ![Output item name](./Media/23042025(54).png)
 
 1. Within the Pipeline expression builder window, select the **Activity outputs** section. Then, choose the **Get items in folder** output of **childItems**. The full option title is **Get items in folder childItems** and Select **OK**.
 
