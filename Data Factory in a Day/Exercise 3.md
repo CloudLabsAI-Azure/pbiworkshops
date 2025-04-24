@@ -16,7 +16,7 @@
 - Summary
 
 ## Introduction
-In this lab you'll learn about how to shape and orchestrate your data using Data Factory experiences.
+In this lab, you'll learn about how to shape and orchestrate your data using Data Factory experiences.
 
 1. How to create a [Dataflow Gen2](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) to prepare and load data using Power Query Online.
 1. Understanding the [storage and compute staging](https://blog.fabric.microsoft.com/blog/data-factory-spotlight-dataflows-gen2?ft=Data-factory:category) architecture for large scale data transformations.
@@ -52,7 +52,7 @@ In this lab you'll learn about how to shape and orchestrate your data using Data
 
 1. Within the Get data explorer's search bar, type **s_iad** to locate the silver lakehouse item. Select the **s_IADLake** item within the OneLake catalog's returned results.
 
-    If prompted to Connect to data source, ensure a Lakehouse connection is listed as the and select **Connect**.
+    If prompted to connect to data source, ensure a Lakehouse connection is listed and select **Connect**.
 
     ![Search for silver lakehouse](./Media/dataflow-choose-data-source.png)
 
@@ -107,7 +107,7 @@ In this lab you'll learn about how to shape and orchestrate your data using Data
 
     ![Merge dimproductcategory](./Media/merge-dimproduct-dimproductcategory.png)
 
-1. Navigate to the far right fo the **DimProduct** table and select the joined **DimProductCategory** table column's top right corner to expand the table, from the avaialble column selections deselect **ProductCategoryKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
+1. Navigate to the far right for the **DimProduct** table and select the joined **DimProductCategory** table column's top right corner to expand the table, from the avaialble column selections deselect **ProductCategoryKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
 
     ![Expand dimproductcategory](./Media/merge-dimproduct-expand-dimproductcategory.png)
 
@@ -143,7 +143,7 @@ In this lab you'll learn about how to shape and orchestrate your data using Data
 
     ![Document the query with Copilot](./Media/document-this-query-copilot.png)
 
-1. When you hover over the query or individual steps, you'll see the descriptions have been applied. By instantly describing your queries, you can ensure your work is clearly documented.
+1. When you hover over the query or individual steps, you'll see the descriptions have been applied. By instantly describing your queries, you can ensure your work is documented.
 
     ![Query and step level descriptions](./Media/query-and-step-descriptions.png)
 
@@ -237,7 +237,7 @@ In this lab you'll learn about how to shape and orchestrate your data using Data
 
     ![Attach PrepContoso](./Media/attach-prepcontoso-item.png)
 
-1. From the task flow, select the **Further transform** task and click on the **New item** option. Within the Create an item pane display properties, change the toggle to the **All items** option.
+1. From the task flow, select the **Further transform** task and click on the **New item** option. Within the Create an item pane, display properties, change the toggle to the **All items** option.
 
     ![Further transform all items](./Media/further-transform-all-items.png)
 
@@ -265,7 +265,7 @@ In this lab you'll learn about how to shape and orchestrate your data using Data
 
     ![Copy job choose table data](./Media/copy-job-choose-data.png)
 
-1. The copy job also supports a limited set of transformations such as column mapping, setting schema names, and renaming tables. Expand the **DimStore** table and then deselect the **GeoLocation** and **Geometry** columns. Once done, select **Next** to continue.
+1. The copy job also supports a limited set of transformations, such as column mapping, setting schema names, and renaming tables. Expand the **DimStore** table and then deselect the **GeoLocation** and **Geometry** columns. Once done, select **Next** to continue.
 
     ![Copy job choose columns](./Media/copy-job-choose-columns.png)
 
@@ -359,6 +359,6 @@ In this lab you'll learn about how to shape and orchestrate your data using Data
 
 In this lab, you explored the **medallion architecture** to manage and transform data efficiently across four layers: **Bronze** (raw), **Silver** (cleansed), **Gold** (curated), and **Platinum** (insight-ready via Power BI semantic models).
 
-You worked with **dynamic pipelines**, **Copy activities**, and **Dataflow Gen2** to orchestrate data movement and transformation using low-code/no-code interfaces. These tools streamlined ingestion, optimized storage, and ensured data was ready for analysis.
+You worked with **dynamic pipelines**, **Copy activities**, and **Dataflow Gen2** to orchestrate data movement and transformation using low-code/no-code interfaces. These tools streamlined ingestion, optimized storage, and ensured that data was ready for analysis.
 
 ### You have successfully completed the lab.
