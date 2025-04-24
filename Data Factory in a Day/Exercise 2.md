@@ -1,4 +1,4 @@
-# Microsoft Fabric - Data Factory in a Day - Lab 2
+# **Microsoft Fabric - Data Factory in a Day - Lab 2**
 
 ![](./Media/main2lab.png)
 
