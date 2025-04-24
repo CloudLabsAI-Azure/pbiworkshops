@@ -171,15 +171,15 @@ In this lab, you will learn how to create a project task flow and understand the
 
     ![](./Media/23042025(42).png)
 
-1. Return to our previously created **samplePipeline** data pipeline item. You can do this either by selecting it on the left side rail if it is still open or by returning to the workspace item list to open it. This step brings you back to the pipeline where we will make the necessary changes to create an expression for a dynamic file output.
+1. Return to our previously created **samplePipeline** data pipeline item. You can do this either by selecting it on the left side rail if it is still open or by returning to the workspace item list to open it.
 
-    ![Sample pipeline selection](./Media/sample-pipeline-selection.png)
+    ![](./Media/23042025(43).png)
 
-1. Select the **Copy data** activity and then go to the **Destination** tab. Select the text box input for the **File path**, where after selection you will see the text **Add dynamic content [Alt+Shift+D]**. Select this text to open the pipeline expression builder.
+1. Select the **Copy data (1)** activity and then go to the **Destination (2)** tab. Select the text box input for the **File path**, where after selection you will see the text **Add dynamic content [Alt+Shift+D] (4)**. Select this text to open the pipeline expression builder.
 
-    ![Add dynamic content](./Media/add-dynamic-content.png)
+    ![](./Media/23042025(44).png)
 
-1. Within the Pipeline expression builder window, select the **Functions** tab. Here, you can explore various functions that exist within the expression library. These functions provide powerful tools for creating dynamic expressions. When you're ready, copy and paste the code block below into the expression input box. Press **Ok** when complete.
+1. Within the Pipeline expression builder window, select the **Functions** tab. Here, you can explore various functions that exist within the expression library. When you're ready, copy and paste the code block below into the expression input box. Press **Ok** when complete.
 
     >**Note:** This expression will be used to create a folder structure within your pipeline that writes the file to nested folders based on the current year, the current month, and the current date of the run time. The forward slash "**/**" character is how the folder structure is defined. This dynamic folder structure helps in organizing your data based on the date, making it easier to manage and retrieve.
 
@@ -192,33 +192,40 @@ In this lab, you will learn how to create a project task flow and understand the
     )
     ```
 
-    ![Expression to build current date folder](./Media/expression-current-date-folder.png)
+    ![](./Media/23042025(45).png)
 
 1. From the **Home** tab on the ribbon, select the **Validate** option once again.
 
     Select the **Run** option to start the pipeline and begin your data ingestion process. Running the pipeline initiates the data transfer from the source to the updated destination folder path.
 
-    ![Validate pipeline and run](./Media/pipeline-validate-run.png)
+    ![](./Media/23042025(46).png)
+
+    >**Note:** A new window will prompt you as unsaved changes have been detected. Select **Save and run** to continue.
+
+    ![](./Media/23042025(38).png)
 
 1. Deselect any previously selected activities within the authoring canvas. The global properties and **Output** view will then become visible. After starting the run of your pipeline, both the **Pipeline status** and the **Activity status** should show a **Succeeded** status. This indicates that everything ran as intended, confirming that your data ingestion process was successful.
 
-    ![Copy output succeeded](./Media/copy-output-succeeded.png)
+    ![](./Media/23042025(47).png)
 
-1. If we return to our previously created **b_IADLake** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the **Holidays.csv** file has now been added to the Files section with a nested folder structure based on the year, month, and date of the run. This confirmation step ensures that the dynamic file output is working as intended and that your data is being organized correctly.
+1. If we return to our previously created **b_IADLake** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the **Holidays.csv** file has now been added to the Files section with a nested folder structure based on the year, month, and date of the run.
 
     >**Note:** If the contents are not yet visible, navigate to the Home tab and select the Refresh icon to start the metadata sync process and update the lakehouse viewer content.
 
-    ![Copy output succeeded](./Media/dynamic-nested-folder.png)
+    ![](./Media/23042025(48).png)
 
-1. Before proceeding, select the ellipses (**...**) next to the top level year folder and then the **Delete** option to remove the sample data from this lab.
-Before proceeding, locate the ellipses (**...**) next to the top-level year folder. Click on the ellipses and select the **Delete** option to remove the sample data from this lab. 
+1. Click the **ellipses (...)** next to the main year folder, then choose **Delete** to remove the sample data used in this lab. 
 
-    ![Delete sample folder](./Media/delete-sample-folder.png)
+    ![](./Media/23042025(49).png)
 
 1. A confirmation window will appear, select **Delete** to proceed with removing the contents.
 
-    ![Confirm folder deletion](./Media/confirm-delete-sample-folder.png)
+    ![](./Media/23042025(50).png)
 
-# Next steps
+## Summary
 
-This conclusion of the lab has demonstrated how to get started with creating a task flow, a data pipeline, the copy activity, and the expression builder. By following these steps, you have gained practical experience in setting up and creating a data ingestion solution using Microsoft Fabric.
+In this lab, you learned how to create a task flow, build a data pipeline, use the copy activity, and work with the expression builder. These steps gave you hands-on experience in setting up a data ingestion solution using Microsoft Fabric.
+
+Now, click on **Next** from the lower right corner to move on to the next page.
+ 
+![alt text](image.png)
