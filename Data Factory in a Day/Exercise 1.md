@@ -102,41 +102,37 @@ In this lab, you will learn how to create a project task flow and understand the
 
 ## Task 1.2: Copy activity
 
-1. From the new and empty data pipeline, select the **Copy data assistant** watermark option to walk through a guided configuration. This assistant provides a step-by-step guide to help you configure the data copy process, ensuring that you set up the pipeline correctly and efficiently.
+1. From the new and empty data pipeline, select the **Copy data assistant** watermark option to walk through a guided configuration.
 
-    ![Copy data assistant watermark](./Media/copy-data-assistant-watermark.png)
+    ![](./Media/23042025(28).png)
 
-1. The first step within the copy data assistant is to choose a data source. Start by selecting the **Sample data** tab and then the **Public Holidays** option from the available options. Choosing a sample data source allows you to practice and understand the data ingestion process without affecting your actual data.
+1. The first step within the copy data assistant is to choose a data source. Start by selecting the **Sample data** tab and then the **Public Holidays** option from the available options.
 
-    ![Sample data holidays](./Media/sample-data-holidays.png)
+    ![](./Media/23042025(29).png)
 
 1. A preview of the data source will now be displayed. This preview helps you verify that you have selected the correct data source and understand the structure of the data. Once you have reviewed the preview, select **Next** to proceed.
 
-    ![Sample data holidays preview](./Media/holidays-preview.png)
+    ![](./Media/23042025(30).png)
 
-1. Choose the **b_IADLakehouse** lakehouse item for the data destination from the **OneLake catalog** list of items. This step is crucial as it determines where your data will be stored.
+1. Choose the **b_IADLakehouse** lakehouse item for the data destination from the **OneLake catalog** list of items. This step determines where your data will be stored.
 
-    >**Note:** You can also find a list of items that you have access to via the **OneLake** tab or by typing the item name directly into the **Search** bar. This flexibility ensures that you can easily locate and select the appropriate data destination.
+    ![](./Media/23042025(31).png)
 
-    ![Sample data holidays preview](./Media/choose-data-destination.png)
+1. Within the data destination configuration, select the **Files (1)** option and set the File name to **Holidays.csv (2)**. Set the Copy behavior to **Merge files (3)** before selecting **Next (4)**.
 
-1. Within the data destination configuration, select the **Files** option and set the File name to **Holidays.csv**. Set the Copy behavior to **Merge files** before selecting **Next**.
-
-    ![Holidays file destination](./Media/holidays-files-destination.png)
+    ![](./Media/23042025(32).png)
 
 1. Set the Compression type to **None**. This setting is important for determining how your data will be stored and accessed. In this case, no compression is applied, which can be useful for maintaining the original data format.
 
-    ![Compression type](./Media/compression-type-none.png)
+    ![](./Media/23042025(33).png)
 
 1. Set the File format to **DelimitedText** and then select **Next**. This format is commonly used for storing tabular data, making it easy to import and export data between different systems.
 
-    ![Delimited file format](./Media/file-format-delimited.png)
+    ![](./Media/23042025(34).png)
 
-1. Within the Review + save window, disable the **Start data transfer immediately** option and then select **OK** to review your configured copy activity within the data pipeline canvas. 
+1. Within the Review + save window, **disable the Start data transfer immediately** option and then select **OK** to review your configured copy activity within the data pipeline canvas.
 
-    This step allows you to review and confirm your settings before initiating the data transfer, ensuring that everything is configured correctly.
-
-    ![Disable data transfer](./Media/disable-data-transfer-immediately.png)
+    ![](./Media/23042025(35).png)
 
 ## Task 2: Authoring canvas
 
