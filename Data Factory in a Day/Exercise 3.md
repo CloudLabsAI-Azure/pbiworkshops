@@ -19,8 +19,11 @@
 In this lab, you'll learn about how to shape and orchestrate your data using Data Factory experiences.
 
 1. How to create a [Dataflow Gen2](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) to prepare and load data using Power Query Online.
+
 1. Understanding the [storage and compute staging](https://blog.fabric.microsoft.com/blog/data-factory-spotlight-dataflows-gen2?ft=Data-factory:category) architecture for large scale data transformations.
+
 1. Configuring [data destination outputs](https://learn.microsoft.com/fabric/data-factory/dataflow-gen2-data-destinations-and-managed-settings).
+
 1. How to create and configure a [Copy job](https://learn.microsoft.com/fabric/data-factory/what-is-copy-job) for a streamlined and user-friendly data ingestion process from source to destination.
 
 
@@ -40,19 +43,17 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![New dataflow gen2 from warehouse](./Media/new-dataflow-gen2-from-warehouse.png)
 
-1. In the New Dataflow Gen2 window, set the dataflow name to **PrepContoso**, select the **Enable Git integration, deployment pipelines and Public API scenarios (preview)** and then select **Create**.
+1. In the New Dataflow Gen2 window, enter the dataflow name **PrepContoso** and press enter.
 
-    ![Name the dataflow](./Media/name-dataflow.png)
+    ![Name the dataflow](./Media/23042025(55).png)
 
 ## Task 2: Connecting to lakehouse tables
 
-1. From the **Home** tab, select **Get data** and then the **More...** option. This step allows you to access a wider range of data sources and connectors, providing flexibility in integrating different data streams into your project.
+1. Navigate to the **Home** tab, click on **Get data**, and then choose **More...** to access additional data source options.
 
-    ![Get data from more](./Media/get-data-more.png)
+    ![Name the dataflow](./Media/23042025(56).png)
 
 1. Within the Get data explorer's search bar, type **s_iad** to locate the silver lakehouse item. Select the **s_IADLake** item within the OneLake catalog's returned results.
-
-    If prompted to connect to data source, ensure a Lakehouse connection is listed and select **Connect**.
 
     ![Search for silver lakehouse](./Media/dataflow-choose-data-source.png)
 
@@ -71,7 +72,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
 ## Task 3: Preparing data using Power Query Online
 
-1. Select the **DimCustomer** table and from the Home tab, navigate to the **Merge queries** option and select **Merge queries as new**.
+1. Select the **DimCustomer** table and from the **Home** tab, navigate to the **Merge queries** option and select **Merge queries as new**.
 
     ![Merge dim customer](./Media/merge-dimcustomer.png)
 
@@ -83,7 +84,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![Expand DimGeography](./Media/merge-dimcustomer-expand.png)
 
-1. On the right-hand side in the Query settings pane, update the **Name** of the query to be **DimCustomers**.
+1. On the right-hand side in the Query settings pane, update the **Name** of the query to be **DimCustomers**
 
     ![Updated query name to DimCustomers](./Media/dimcustomers-rename.png)
 
@@ -111,41 +112,9 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![Expand dimproductcategory](./Media/merge-dimproduct-expand-dimproductcategory.png)
 
-1. On the right-hand side in the Query settings pane, update the **Name** of the query to be **DimProducts**.
+1. On the right-hand side in the Query settings pane, update the **Name** of the query to be **DimProducts**
 
     ![Updated query name to DimProducts](./Media/dimproducts-rename.png)
-
-1. ⭐ [**Optional**] Select **Copilot** from the Home tab. In the Copilot pane, we'll apply a transformation to remove any unnecessary columns that are not needed for relationships in our final semantic model.
-
-    Enter the following text into the Copilot text entry and then select the Submit button.
-
-    ```text
-    Keep the ProductKey column and remove all other columns containing ID, Key or Label in the name.
-    ```
-
-    ![Select columns with Copilot text input](./Media/select-columns-copilot.png)
-
-1. Copilot has now generated an expression and added it to our Applied Steps list. Always ensure the correct transformations are applied by using the data preview window or inspecting the formula bar logic. If there are any errors, you can select **Undo**, type the correction into the text box, or select the **X** next to the step in the Applied Steps list.
-
-    ![Select columns with Copilot](./Media/choose-columns-copilot.png)
-
-1. Ask Copilot for a description of your query and its steps for better understanding and clarity by using the following text prompt.
-
-    ```text
-    Describe what this query is doing
-    ```
-
-    ![Describe this query with Copilot](./Media/describe-this-query-copilot.png)
-
-    **Important:** You can also ask Copilot to describe a single step instead of the full query.
-
-1. Select the **[+ Add to query]** button to add the query and step-level descriptions directly to your query as documentation.
-
-    ![Document the query with Copilot](./Media/document-this-query-copilot.png)
-
-1. When you hover over the query or individual steps, you'll see the descriptions have been applied. By instantly describing your queries, you can ensure your work is documented.
-
-    ![Query and step level descriptions](./Media/query-and-step-descriptions.png)
 
 ## Task 4: Outputting data to the warehouse destination
 
