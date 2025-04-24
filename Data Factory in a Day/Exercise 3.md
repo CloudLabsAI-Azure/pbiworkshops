@@ -118,7 +118,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
 ## Task 4: Outputting data to the warehouse destination
 
-1. Begin by removing the default data destination. Select the **FactOnlineSales (1)** query, On the **Home** tab, click on **Default data destination (2)**, and then select **Remove (3)**.
+1. First, we need to remove the default data destination. Select the **FactOnlineSales (1)** query, on the **Home** tab, click on **Default data destination (2)**, and then select **Remove (3)**.
 
     ![Merge dim customer](./Media/23042025(64).png)
 
