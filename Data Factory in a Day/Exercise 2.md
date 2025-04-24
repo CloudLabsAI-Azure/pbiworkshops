@@ -1,12 +1,30 @@
-# Orchestrating data movement
+# Microsoft Fabric - Data Factory in a Day - Lab 2
 
+![](./Media/main2lab.png)
+
+## Contents
+- Introduction
+- Task 1: Create a Data Pipeline and Set Up Data Copy from Web to Lakehouse
+    - Task 1.1: Create a data pipeline
+    - Task 1.2: Creating a data connection
+    - Task 1.3: Copy activity settings
+- Task 2: Enriching raw data
+    - Task 2.1: Creating and using variables
+    - Task 2.2: ForEach loop and conditional branches
+- Task 3: Attach data pipeline to task flow
+
+## Introduction
 In this lab, we will guide you through the process of creating a comprehensive data ingestion solution using data pipelines in Microsoft Fabric. We will start by setting up the copy activity to transfer data from a sample source to a dynamic destination within a lakehouse. This includes using the expression builder to create a dynamic folder structure based on the current date of execution.
 
 Throughout the lab, you will validate and run the pipeline, ensuring that the data ingestion process is successful and that the data is organized correctly in the lakehouse. By the end of this lab, you will have a solid understanding of how to efficiently manage a data ingestion workflow.
 
-### Create a data pipeline
+## Task 1: Create a Data Pipeline and Set Up Data Copy from Web to Lakehouse
 
-1. Continuing from the [Getting started](GettingStarted.md) tutorial where we built a lakehouse and a sample data pipeline, we will now proceed to select and add a **New item** from the **High-volume data ingest** task.
+### Task 1.1: Create a data pipeline
+
+1. In the Fabric portal, open the previously created workspace named **Data Factory in a Day_<inject key="Deployment ID" enableCopy="false"/>**. This is where you built the lakehouse and sample data pipeline.
+
+2. Next, go to the **High-volume data ingest** task and select **+ New item** to continue.
 
     ![Low volume new item](./Media/new-pipeline-contoso.png)
 
@@ -14,17 +32,17 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![High volume data ingest](./Media/task-flow-new-item-high-volume.png)
 
-1. In the New pipeline window, set the data pipeline name to "**getContosoSample**" and then select **Create**.
+1. In the New pipeline window, set the data pipeline name to **getContosoSample** and then select **Create**.
 
     ![Bronze data lakehouse](./Media/new-pipeline-name-getcontososample.png)
 
-### Creating a data connection
+### Task 1.2: Creating a data connection
 
 1. From the new and empty data pipeline, select the **Pipeline activity** watermark option and then choose **Copy data** to add this activity to the authoring canvas.
 
     ![Copy data from watermark](./Media/pipeline-activity-copy-data.png)
 
-1. With the **Copy data** activity selected, navigate to the **Source** tab. Within the **Connection** drop-down menu, select the **More** option to launch the Get data navigator. This navigator provides a comprehensive interface for connecting to various data sources, ensuring that you can easily integrate different data streams into your pipeline.
+1. With the **Copy data** activity selected, navigate to the **Source** tab. Within the **Connection** drop-down menu, select the **More** option to launch the Get data navigator.
 
     ![Copy data connection more option](./Media/source-connection-more.png)
 
@@ -40,7 +58,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Contoso sample connection](./Media/contoso-sample-connection.png)
 
-### Copy activity settings
+### Task 1.3: Copy activity settings
 
 1. With the **Copy data** activity selected and the **Source** tab displayed, select the **Settings** option next to the File format field. Within the **Compression type** setting, choose **ZipDeflate (.zip)** and select **OK** to complete.
 
@@ -101,9 +119,9 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Copy output succeeded](./Media/unzip-lakehouse-contents.png)
 
-### Enriching raw data
+## Task 2: Enriching raw data
 
-#### Creating and using variables
+### Task 2.1: Creating and using variables
 
 1. Select the **New item** option on the **Silver data** from your task flow to add another storage item to your project. Within the **Item type** selection, select **Lakehouse**.
 
@@ -193,7 +211,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Output window file names](./Media/output-window-filenames.png)
 
-#### ForEach loop and conditional branches
+## Task 2.2: ForEach loop and conditional branches
 
 1. Select the **Activities** tab and then the **ForEach** activity to add this to your canvas. This activity allows you to iterate over a collection of items, performing a set of actions for each item in the collection.
 
@@ -317,7 +335,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Validate save and run the pipeline](./Media/final-pipeline-monitor.png)
 
-### Attach data pipeline to task flow
+## Task 3: Attach data pipeline to task flow
 
 1. Return to the workspace by selecting the workspace name on the left side-rail. This step ensures that you can continue working on other aspects of your project while the lakehouse is being set up.
 

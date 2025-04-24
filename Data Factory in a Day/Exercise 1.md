@@ -1,5 +1,6 @@
 # Microsoft Fabric - Data Factory in a Day - Lab 1
 
+![](./Media/main1lab.png)
 
 ## Contents
 - Introduction
