@@ -69,7 +69,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Deselect preserve zip file name](./Media/23042025(51).png)
 
-1. With the Copy data activity still selected, navigate to the **Destination** tab. From the list of connections, select the previously configured lakehouse **b_IADLake**. This step ensures that the data is being copied to the correct destination, which is essential for maintaining data integrity and organization.
+1. With the Copy data activity still selected, navigate to the **Destination** tab. From the list of connections, select the previously configured lakehouse **b_IADLake**.
 
     ![Destination lakehouse](./Media/destination-biadlake.png)
 
@@ -97,7 +97,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Destination folder](./Media/copy-behavior-preserve.png)
 
-1. Navigate to the General tab with the Copy data activity selected. Update the **Name** and **Description** fields with the appropriate text.
+1. Navigate to the **General** tab with the Copy data activity selected. Update the **Name** and **Description** fields with the appropriate text.
 
     | Property | Text |
     | :-- | :-- |
@@ -174,7 +174,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Set variable name](./Media/set-file-directory-name.png)
 
-1. Navigate to the **Activities** tab and select the **Get metadata** activity to add it to your canvas. Make sure it is your active selection.
+1. Navigate to the **Activities** tab and select the **Get metadata** activity to add it to your canvas.
 
     Next, within the **Settings** options, set the **Connection** to **b_IADLake** from the available connection options.
 
@@ -190,7 +190,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Get metadata field list](./Media/get-metadata-field-list.png)
 
-1. Next, navigate to the **General** tab with the Get metadata activity selected. Update the **Name** field with the text **Get items in folder**.
+1. Next, navigate to the **General** tab with the Get metadata activity selected. Update the **Name** field with the text **Get items in folder**
 
     ![Get items in folder name](./Media/get-child-items-in-folder.png)
 
@@ -226,7 +226,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Output item name](./Media/get-child-items-output.png)
 
-1. Selct the **+ option** on the For each activity and then select **Copy data**. This step will allow us to repeatedly execute the copy data activity for each item in the array.
+1. Select **+ option** on the For each activity and then select **Copy data**. This step will allow us to repeatedly execute the copy data activity for each item in the array.
 
     ![For each copy data](./Media/for-each-copy-data.png)
 

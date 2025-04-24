@@ -1,4 +1,4 @@
-# Microsoft Fabric - Data Factory in a Day
+# **Microsoft Fabric - Data Factory in a Day**
 
 ### Overall Estimated Duration: 4 Hours
 
@@ -42,7 +42,7 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
  
 ![](./Media/23042025(2).png)
 
-### Virtual Machine & Lab Guide
+## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  

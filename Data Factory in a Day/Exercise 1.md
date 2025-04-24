@@ -50,8 +50,6 @@ In this lab, you will learn how to create a project task flow and understand the
 
     >**Note:** The workspace name must be unique. Make sure a green check mark with "This name is available" is displayed below the Name field.
 
-5. If you choose, you can enter a Description for the workspace. This is an optional field.
-
 6. Click on **Advanced** to expand the section.
 
    ![](./Media/23042025(17).png)
@@ -116,7 +114,7 @@ In this lab, you will learn how to create a project task flow and understand the
 
     ![](./Media/23042025(30).png)
 
-1. Choose the **b_IADLakehouse** lakehouse item for the data destination from the **OneLake catalog** list of items. This step determines where your data will be stored.
+1. Choose the **b_IADLake** lakehouse item for the data destination from the **OneLake catalog** list of items. This step determines where your data will be stored.
 
     ![](./Media/23042025(31).png)
 
@@ -128,7 +126,7 @@ In this lab, you will learn how to create a project task flow and understand the
 
     ![](./Media/23042025(33).png)
 
-1. Set the File format to **DelimitedText** and then select **Next**. This format is commonly used for storing tabular data, making it easy to import and export data between different systems.
+1. Set the File format to **DelimitedText** and then select **Next**. This format is used for storing tabular data, making it easy to import and export data between different systems.
 
     ![](./Media/23042025(34).png)
 
@@ -138,7 +136,7 @@ In this lab, you will learn how to create a project task flow and understand the
 
 ## Task 2: Authoring canvas
 
-1. Within the authoring canvas, select the **Copy data** activity. Below, you will find the properties section where you can review the Source, Destination, Settings, and more. This allows you to edit their configurations directly, ensuring that your data copy activity is set up correctly and tailored to your specific needs.
+1. Within the authoring canvas, select the **Copy data** activity. Below, you will find the properties section where you can review the Source, Destination, Settings, and more. This allows you to edit their configurations directly..
 
     ![](./Media/23042025(36).png)
 
@@ -180,7 +178,7 @@ In this lab, you will learn how to create a project task flow and understand the
 
     ![](./Media/23042025(44).png)
 
-1. Within the Pipeline expression builder window, select the **Functions** tab. Here, you can explore various functions that exist within the expression library. When you're ready, copy and paste the code block below into the expression input box. Press **Ok** when complete.
+1. Within the Pipeline expression builder window, select the **Functions** tab. Here, you can explore various functions that exist within the expression library. When you're ready, copy and paste the code block below into the expression input box. Press **OK** when complete.
 
     >**Note:** This expression will be used to create a folder structure within your pipeline that writes the file to nested folders based on the current year, the current month, and the current date of the run time. The forward slash "**/**" character is how the folder structure is defined. This dynamic folder structure helps in organizing your data based on the date, making it easier to manage and retrieve.
 
@@ -209,7 +207,7 @@ In this lab, you will learn how to create a project task flow and understand the
 
     ![](./Media/23042025(47).png)
 
-1. If we return to our previously created **b_IADLake** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the **Holidays.csv** file has now been added to the Files section with a nested folder structure based on the year, month, and date of the run.
+1. If we return to our previously created **b_IADLake** lakehouse item (either by selecting it on the left side rail if still open or by returning to the workspace item list to open), we can confirm that the **Holidays.csv** file has now been added to the **Files** section with a nested folder structure based on the year, month, and date of the run.
 
     >**Note:** If the contents are not yet visible, navigate to the Home tab and select the Refresh icon to start the metadata sync process and update the lakehouse viewer content.
 
