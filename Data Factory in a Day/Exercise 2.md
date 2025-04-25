@@ -288,11 +288,11 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Table name splitter](./Media/for-each-table-name-split.png)
 
-1. Next, with the Copy data activity still selected and the Source tab displayed, expand the **Advanced** section. Hover above either of the **Table action** values to display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
+1. Next, with the Copy data activity still selected and the Source tab displayed,hover above either of the **Table action** values to display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
 
-    ![Table action](./Media/for-each-copy-table-action.png)
+    ![Table action](./Media/E2T2.2S13.png)
 
-1. Within the expression builder, we'll use the if condition from the logical functions group and the startswith function from the string functions group to determine if the string starts with the prefix of **Dim** for our dimension tables. If true, we'll set the value to **Overwrite**, if false, **Append**. Once complete, select **OK** to continue.
+1. Within the expression builder, we'll use the if condition from the logical functions group and the starts with function from the string functions group to determine if the string starts with the prefix of **Dim** for our dimension tables. If true, we'll set the value to **Overwrite**, if false, **Append**. Once complete, select **OK** to continue.
 
     Copy and paste the code block below into the expression input box.
 
