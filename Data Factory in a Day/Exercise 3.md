@@ -26,7 +26,6 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
 1. How to create and configure a [Copy job](https://learn.microsoft.com/fabric/data-factory/what-is-copy-job) for a streamlined and user-friendly data ingestion process from source to destination.
 
-
 ## Task 1: Creating Golden data storage and a Dataflow Gen2
 
 1. In the Fabric portal, open the previously created workspace named **Data Factory in a Day_<inject key="Deployment ID" enableCopy="false"/>**.
@@ -122,7 +121,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![Merge dim customer](./Media/23042025(64).png)
 
-1. On Remove default data destination dialog opens. Select **Remove**.
+1. On the **Remove default data destination** dialog opens. Select **Remove**.
 
     ![Merge dim customer](./Media/23042025(66).png)
 
@@ -326,11 +325,11 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
 1. With the invoke pipeline activity still selected, go to the **General** tab and update the activity **Name** to **Invoke createContosoTables**. Once complete, select the **Save** icon and then **Run**.
 
-    >**Note:** You can set a schedule from this first pipeline, and it will call the subsequent pipelines and its dataflow upon successful completion or have the pipeline triggered by events like when new files are added to the lakehouse.
+    >**Note:** You can set a schedule from this first pipeline, and it will call the subsequent pipelines and their dataflow upon successful completion or have the pipeline triggered by events like when new files are added to the lakehouse.
 
     ![Invoke createContosoTables pipeline](./Media/get-contoso-sample-general-name-run.png)
 
-1. From the **Output** pane monitor that the activities and **Succeedded** and once done close the pipeline by selecting the **X** on the left side-rail to return to the workspace.
+1. From the **Output** pane monitor that the activities and **Succeeded**, and once done, close the pipeline by selecting the **X** on the left side-rail to return to the workspace.
 
     ![Invoke succeeded and close](./Media/get-contoso-sample-general-succeeded-close.png)
 
