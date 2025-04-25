@@ -30,7 +30,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
 1. In the Fabric portal, open the previously created workspace named **Data Factory in a Day_<inject key="Deployment ID" enableCopy="false"/>**.
 
-1. Select the **+ New item** option on the **Gold data** from your task flow to add another storage item to your project. Within the **Item type** selection, select **Warehouse**.
+1. Select the **+ New item** option on the **Golden data** from your task flow to add another storage item to your project. Within the **Item type** selection, select **Warehouse**.
 
     ![Golden data new item](./Media/task-flow-new-item-gold-data.png)
 
@@ -83,7 +83,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![Merge dim customer](./Media/23042025(59).png)
 
-1. Navigate to the far right for the **DimCustomers** table and select the joined **DimGeography** table column's top right corner to expand the table, from the avaialble column selections deselect **GeographyKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
+1. Navigate to the far right for the **DimCustomers** table and select the joined **DimGeography** table column's top right corner to expand the table, from the available column selections deselect **GeographyKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
 
     ![Expand DimGeography](./Media/merge-dimcustomer-expand.png)
 
@@ -95,7 +95,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![Merge dim customer](./Media/23042025(61).png)
 
-1. Navigate to the far right fo the **Merge** Queries and select the joined **DimProductSubcategory** table column's top right corner to expand the table, from the avaialble column selections **deselect** **ProductSubCategoryKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
+1. Navigate to the far right fo the **Merge** Queries and select the joined **DimProductSubcategory** table column's top right corner to expand the table, from the available column selections **deselect** **ProductSubCategoryKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
 
     ![Expand dimproductsubcategory](./Media/merge-dimproduct-expand-dimproductsubcategory.png)
 
@@ -111,7 +111,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![Updated query name to DimProducts](./Media/dimproducts-rename.png)
 
-1. Navigate to the far right for the **DimProducts** table and select the joined **DimProductCategory** table column's top right corner to expand the table, from the avaialble column selections deselect **ProductCategoryKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
+1. Navigate to the far right for the **DimProducts** table and select the joined **DimProductCategory** table column's top right corner to expand the table, from the available column selections deselect **ProductCategoryKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
 
     ![Expand dimproductcategory](./Media/merge-dimproduct-expand-dimproductcategory.png)
 
@@ -349,7 +349,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
 ## Summary
 
-In this lab, you explored the **medallion architecture** to manage and transform data efficiently across four layers: **Bronze** (raw), **Silver** (cleansed), **Gold** (curated), and **Platinum** (insight-ready via Power BI semantic models).
+In this lab, you explored the **medallion architecture** to manage and transform data efficiently across four layers: **Bronze** (raw), **Silver** (cleansed), **Gold** (curated).
 
 You worked with **dynamic pipelines**, **Copy activities**, and **Dataflow Gen2** to orchestrate data movement and transformation using low-code/no-code interfaces. These tools streamlined ingestion, optimized storage, and ensured that data was ready for analysis.
 
