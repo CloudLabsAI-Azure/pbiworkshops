@@ -294,15 +294,35 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
 1. Within the workspace, select the **High-volume data ingest** task flow item and from the filtered list, select the **getContosoSample** pipeline.
 
-    ![High-volume data ingest task flow](./Media/get-contoso-sample-pipeline.png)
+    ![Add the invoke pipeline activity](./Media/23042025(73).png)
 
 1. From the **Home** tab, add the **Invoke Pipeline (Preview)** activity.
 
     ![Add the invoke pipeline activity](./Media/get-contoso-sample-invoke-pipeline.png)
 
-1. Create a conditional **On success** path between the **Get and Unzip files** activity and the **Invoke pipeline1** activity. From the activity settings **Pipeline** option, select the **createContosoTables** pipeline.
+1. Create a conditional **On success** path between the **Get and Unzip files** activity and the **Invoke pipeline1** activity. From the activity settings **Connection** option, select **More**.
 
-    ![Invoke createContosoTables pipeline](./Media/get-contoso-sample-invoke-settings.png)
+    ![Add the invoke pipeline activity](./Media/23042025(68).png)
+
+1. On the **Choose a data source to get started** dialog appears, select the **Fabric Data Pipelines** as your data source.
+
+    ![Add the invoke pipeline activity](./Media/23042025(69).png)
+
+1. Enter **FabricDataPipelines** as the connection name, then click **Sign in** to open the sign-in window. Enter the credentials provided below.
+
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+      ![Add the invoke pipeline activity](./Media/23042025(70).png)
+
+1. After signing in successfully, click **Connect** to establish the connection.
+
+    ![Add the invoke pipeline activity](./Media/23042025(71).png)
+
+1. From the activity settings **Pipeline** option, select the **createContosoTables** pipeline.
+
+    ![Add the invoke pipeline activity](./Media/23042025(72).png)
 
 1. With the invoke pipeline activity still selected, go to the **General** tab and update the activity **Name** to **Invoke createContosoTables**. Once complete, select the **Save** icon and then **Run**.
 
