@@ -57,45 +57,45 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
     https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/ContosoSales.zip
     ```
 
-    ![Contoso sample connection](./Media/contoso-sample-connection.png)
+    ![](./Media/contoso-sample-connection.png)
 
 ## Task 1.3: Copy activity settings
 
 1. With the Copy data activity selected and the **Source** tab displayed, select the **Settings** option next to the File format field. Within the **Compression type** setting, choose **ZipDeflate (.zip)** and select **OK** to complete.
 
-    ![Contoso sample connection](./Media/23042025(76).png)
+    ![](./Media/23042025(76).png)
 
 1. Next, with the Copy data activity still selected and the Source tab displayed, expand the **Advanced** section. **Deselect** the option to **Preserve zip file name as folder**. This allows you to customize the folder name for your zip contents, providing more flexibility in organizing your data.
 
-   ![Contoso sample connection](./Media/23042025(77).png)
+   ![](./Media/23042025(77).png)
 
 1. With the Copy data activity still selected, navigate to the **Destination** tab. From the list of connections, select the previously configured lakehouse **b_IADLake**.
 
-    ![Contoso sample connection](./Media/23042025(78).png)
+    ![](./Media/23042025(78).png)
 
 1. Within the Destination settings, select the **Files** option and then the **Directory** file path text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder. The expression builder allows us to create dynamic file paths, which can be customized based on various dynamic parameters such as date and time or static text values.
 
-    ![Contoso sample connection](./Media/23042025(79).png)
+    ![](./Media/23042025(79).png)
 
 1. From the right-side Functions pane, select the `concat()` function under **String Functions**.
 
-6. In the first argument of the `concat()` function, enter `'ContosoSales\'` in single quotes.
+1. In the first argument of the `concat()` function, enter `'ContosoSales\'` in single quotes.
 
-7. Place a comma after the first argument to begin adding the second argument.
+1. Place a comma after the first argument to begin adding the second argument.
 
-8. From the Date Functions section, select `formatDateTime()`.
+1. From the Date Functions section, select `formatDateTime()`.
 
-9. Inside `formatDateTime()`, use `convertFromUtc()` as the first argument.
+1. Inside `formatDateTime()`, use `convertFromUtc()` as the first argument.
 
-10. Inside `convertFromUtc()`, use `utcnow()` as the first parameter.
+1. Inside `convertFromUtc()`, use `utcnow()` as the first parameter.
 
-11. Set the second parameter of `convertFromUtc()` to `'Central Standard Time'` in single quotes.
+1. Set the second parameter of `convertFromUtc()` to `'Central Standard Time'` in single quotes.
 
-12. Set the second parameter of `formatDateTime()` to `'yyyy/MM/dd'` in single quotes.
+1. Set the second parameter of `formatDateTime()` to `'yyyy/MM/dd'` in single quotes.
 
-13. Verify that the entire expression is built correctly without syntax errors.
+1. Verify that the entire expression is built correctly without syntax errors.
 
-1. Final view in the editor will look like this Once done, press **OK**.
+1. Final view in the editor will look like this. Once done, press **OK**.
 
     ```text
     @concat(
@@ -113,7 +113,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 1. With the Copy data activity and Destination settings still selected, expand the **Advanced** section, select the drop-down for the **Copy behavior** and then choose the **Preserve hierarchy** option. This option maintains the original file names as they are within the zip file, ensuring that the file structure is preserved during the copy process.
 
-    ![Contoso sample connection](./Media/23042025(80).png)
+    ![](./Media/23042025(80).png)
 
 1. Navigate to the **General** tab with the Copy data activity selected. Update the **Name** and **Description** fields with the appropriate text.
 
@@ -157,6 +157,12 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 1. In the New pipeline window, set the data pipeline name to **createContosoTables** and then select **Create**.
 
     ![Create Contoso tables pipeline](./Media/create-contoso-tables.png)
+
+1. **Close** the "Copy data into Lakehouse" dialog by clicking **Yes, cancel** when prompted. 
+
+    ![](./Media/23042025(81).png)
+
+    ![](./Media/23042025(82).png)
 
 1. Select the **Activities** tab and then the **Set variable** activity to add this to your canvas. The Set variable activity allows you to define and assign values to variables that can be used throughout your pipeline.
 
@@ -218,7 +224,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     A new window will prompt you as unsaved changes have been detected. Select **Save and run** to continue. 
 
-    ![Conditional path](./Media/conditional-path-var-metadata.png)
+    ![](./Media/23042025(83).png)
 
 1. Deselect any previously selected activities within the authoring canvas and navigate to the **Output** view. This view allows you to monitor the current status of your pipeline both during and after its run. In this example, both the Pipeline status and the Activity status should show a **Succeeded** status. This indicates that everything ran as intended, confirming that your data ingestion process was successful.
 
@@ -234,19 +240,19 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     Next, create a conditional path by dragging and dropping the **On success** option between the **Get items in folder activity** and the **For each file activity**. This step establishes a logical flow in your pipeline, ensuring that the ForEach retrieval occurs only after the file directory has been successfully created.
 
-    ![Output window file names](./Media/foreach-conditional-path-name.png)
+    ![](./Media/23042025(84).png)
 
 1. With the For each file activity still active, navigate to the **Settings** tab. Select the **Items** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
 
-    ![Output item name](./Media/23042025(54).png)
+    ![](./Media/23042025(54).png)
 
 1. Within the Pipeline expression builder window, select the **Activity outputs** section. Then, choose the **Get items in folder** output of **childItems**. The full option title is **Get items in folder childItems** and select **OK**.
 
-    ![Output item name](./Media/get-child-items-output.png)
+    ![](./Media/get-child-items-output.png)
 
 1. Select **+ option** on the For each activity and then select **Copy data**. This step will allow us to repeatedly execute the copy data activity for each item in the array.
 
-    ![For each copy data](./Media/for-each-copy-data.png)
+    ![](./Media/for-each-copy-data.png)
 
 1. Select the **Edit** option on the For each activity to drill into the nested authoring canvas.
 
@@ -254,7 +260,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 1. Navigate to the **General** tab with the Copy data activity selected. Update the **Name** field with the text **Copy tables**.
 
-    ![Update copy data activity name](./Media/for-each-copy-data-name.png)
+    ![](./Media/for-each-copy-data-name.png)
 
 1. With the **Copy data** activity still selected, configure the following options in the **Source** tab. Once complete, select the **Directory** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder :
 
