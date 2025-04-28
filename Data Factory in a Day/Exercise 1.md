@@ -30,9 +30,13 @@ In this lab, you will learn how to create a project task flow and understand the
 
     ![](./Media/23042025(12).png)
 
-1. Successfully upgraded to Microsoft Fabric dialog opens. Select **Fabric Home Page**.
+1. On Successfully upgraded to Microsoft Fabric dialog opens. Select **Fabric Home Page**.
 
     ![](./Media/23042025(13).png)
+
+1. On Welcome to the Fabric view dialog opens, click **Cancel**.
+
+    ![](./Media/23042025(74).png)
 
 1. You will be navigated to the **Microsoft** **Fabric Home page**.
 
