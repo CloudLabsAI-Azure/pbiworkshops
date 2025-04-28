@@ -77,7 +77,25 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Contoso sample connection](./Media/23042025(79).png)
 
-1. Copy the code block below and paste it into the expression input box. Once done, press **OK**.
+1. From the right-side Functions pane, select the `concat()` function under **String Functions**.
+
+6. In the first argument of the `concat()` function, enter `'ContosoSales\'` in single quotes.
+
+7. Place a comma after the first argument to begin adding the second argument.
+
+8. From the Date Functions section, select `formatDateTime()`.
+
+9. Inside `formatDateTime()`, use `convertFromUtc()` as the first argument.
+
+10. Inside `convertFromUtc()`, use `utcnow()` as the first parameter.
+
+11. Set the second parameter of `convertFromUtc()` to `'Central Standard Time'` in single quotes.
+
+12. Set the second parameter of `formatDateTime()` to `'yyyy/MM/dd'` in single quotes.
+
+13. Verify that the entire expression is built correctly without syntax errors.
+
+1. Final view in the editor will look like this Once done, press **OK**.
 
     ```text
     @concat(
