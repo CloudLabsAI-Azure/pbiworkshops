@@ -42,9 +42,9 @@ In this lab, you will learn how to create a project task flow and understand the
 
     ![](./Media/23042025(15).png)
 
-1. Now let's create a workspace with a Fabric license. Select **Workspaces** **(1)** from the left navigation bar. A dialog opens.
+1. Now let's create a workspace with a Fabric license. Select **Workspaces** from the left navigation bar. A dialog opens.
 
-2. Click **+ New workspace** **(2)** found at the bottom of the pop-out menu.
+2. Click **+ New workspace** found at the bottom of the pop-out menu.
 
     ![](./Media/23042025(16).png)
 
@@ -122,7 +122,7 @@ In this lab, you will learn how to create a project task flow and understand the
 
     ![](./Media/23042025(31).png)
 
-1. Within the data destination configuration, select the **Files (1)** option and set the File name to **Holidays.csv (2)**. Set the Copy behavior to **Merge files (3)** before selecting **Next (4)**.
+1. Within the data destination configuration, select the **Files** option and set the File name to **Holidays.csv**. Set the Copy behavior to **Merge files** before selecting **Next**.
 
     ![](./Media/23042025(32).png)
 
@@ -182,7 +182,7 @@ In this lab, you will learn how to create a project task flow and understand the
 
     ![](./Media/23042025(44).png)
 
-1. Within the Pipeline expression builder window, select the **Functions** tab. Here, you can explore various functions that exist within the expression library. When you're ready, copy and paste the code block below into the expression input box. Press **OK** when complete.
+1. Copy the code block below and paste it into the expression input box. Once done, press **OK**.
 
     >**Note:** This expression will be used to create a folder structure within your pipeline that writes the file to nested folders based on the current year, the current month, and the current date of the run time. The forward slash "**/**" character is how the folder structure is defined. This dynamic folder structure helps in organizing your data based on the date, making it easier to manage and retrieve.
 
@@ -195,7 +195,7 @@ In this lab, you will learn how to create a project task flow and understand the
     )
     ```
 
-    ![](./Media/23042025(45).png)
+    ![](./Media/23042025(75).png)
 
 1. From the **Home** tab on the ribbon, select the **Validate** option once again.
 
