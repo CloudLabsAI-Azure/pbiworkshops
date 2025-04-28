@@ -61,23 +61,23 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 ## Task 1.3: Copy activity settings
 
-1. With the **Copy data** activity selected and the **Source** tab displayed, select the **Settings** option next to the File format field. Within the **Compression type** setting, choose **ZipDeflate (.zip)** and select **OK** to complete.
+1. With the Copy data activity selected and the **Source** tab displayed, select the **Settings** option next to the File format field. Within the **Compression type** setting, choose **ZipDeflate (.zip)** and select **OK** to complete.
 
-    ![Contoso sample connection](./Media/zip-deflate-compression.png)
+    ![Contoso sample connection](./Media/23042025(76).png)
 
 1. Next, with the Copy data activity still selected and the Source tab displayed, expand the **Advanced** section. **Deselect** the option to **Preserve zip file name as folder**. This allows you to customize the folder name for your zip contents, providing more flexibility in organizing your data.
 
-    ![Deselect preserve zip file name](./Media/23042025(51).png)
+   ![Contoso sample connection](./Media/23042025(77).png)
 
 1. With the Copy data activity still selected, navigate to the **Destination** tab. From the list of connections, select the previously configured lakehouse **b_IADLake**.
 
-    ![Destination lakehouse](./Media/destination-biadlake.png)
+    ![Contoso sample connection](./Media/23042025(78).png)
 
 1. Within the Destination settings, select the **Files** option and then the **Directory** file path text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder. The expression builder allows us to create dynamic file paths, which can be customized based on various dynamic parameters such as date and time or static text values.
 
-    ![Destination lakehouse](./Media/destination-files-directory.png)
+    ![Contoso sample connection](./Media/23042025(79).png)
 
-1. In the Pipeline expression builder window, select the **Functions** tab. Here, you can explore various functions that exist within the expression library. In this example, we'll use both date and string functions to create a dynamic folder path. When you're ready, copy and paste the code block below into the expression input box. Press **OK** when complete.
+1. Copy the code block below and paste it into the expression input box. Once done, press **OK**.
 
     ```text
     @concat(
@@ -95,7 +95,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 1. With the Copy data activity and Destination settings still selected, expand the **Advanced** section, select the drop-down for the **Copy behavior** and then choose the **Preserve hierarchy** option. This option maintains the original file names as they are within the zip file, ensuring that the file structure is preserved during the copy process.
 
-    ![Destination folder](./Media/copy-behavior-preserve.png)
+    ![Contoso sample connection](./Media/23042025(80).png)
 
 1. Navigate to the **General** tab with the Copy data activity selected. Update the **Name** and **Description** fields with the appropriate text.
 
