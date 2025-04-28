@@ -230,7 +230,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     From the **Get items in folder** activity, select the last column called **Output** to review the contents of the activity. This step allows you to verify that the filenames from your directory have been correctly retrieved and included in the output.
 
-    ![Output window file names](./Media/output-window-filenames.png)
+    ![Output window file names](./Media/23042025(85).png)
 
 ## Task 2.2: ForEach loop and conditional branches
 

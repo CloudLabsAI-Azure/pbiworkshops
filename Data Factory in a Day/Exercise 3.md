@@ -329,7 +329,7 @@ In this lab, you'll learn about how to shape and orchestrate your data using Dat
 
     ![Invoke createContosoTables pipeline](./Media/get-contoso-sample-general-name-run.png)
 
-1. From the **Output** pane monitor that the activities and **Succeeded**, and once done, close the pipeline by selecting the **X** on the left side-rail to return to the workspace.
+1. From the **Output** pane monitor that the activities are **Succeeded**, and once done, close the pipeline by selecting the **X** on the left side-rail to return to the workspace.
 
     ![Invoke succeeded and close](./Media/get-contoso-sample-general-succeeded-close.png)
 
