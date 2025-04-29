@@ -184,7 +184,19 @@ In this lab, you will learn how to create a project task flow and understand the
 
     ![](./Media/23042025(44).png)
 
-1. Copy the code block below and paste it into the expression input box. Once done, press **OK**.
+1. From the Date Functions section, select `formatDateTime()`.
+
+1. Inside `formatDateTime()`, use `convertFromUtc()` as the first argument.
+
+1. Inside `convertFromUtc()`, use `utcnow()` as the first parameter.
+
+1. Set the second parameter of `convertFromUtc()` to `'Central Standard Time'` in single quotes.
+
+1. Set the second parameter of `formatDateTime()` to `'yyyy/MM/dd'` in single quotes.
+
+1. Verify that the entire expression is built correctly without syntax errors.
+
+1. The final view in the editor will look like this. Once done, press **OK**.
 
     >**Note:** This expression will be used to create a folder structure within your pipeline that writes the file to nested folders based on the current year, the current month, and the current date of the run time. The forward slash "**/**" character is how the folder structure is defined. This dynamic folder structure helps in organizing your data based on the date, making it easier to manage and retrieve.
 
