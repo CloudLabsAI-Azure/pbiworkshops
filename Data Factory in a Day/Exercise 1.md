@@ -140,6 +140,8 @@ In this lab, you will learn how to create a project task flow and understand the
 
 ## Task 2: Authoring canvas
 
+## **Note:** Please note that the name of the copy activity is unique to each user, so there is no need to worry; a random name will be generated each time.
+
 1. Within the authoring canvas, select the **Copy data** activity. Below, you will find the properties section where you can review the Source, Destination, Settings, and more. This allows you to edit their configurations directly..
 
     ![](./Media/23042025(36).png)
