@@ -342,7 +342,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 1. Deselect any previously selected activities within the authoring canvas. The global properties and **Output** view will then become visible. After starting the run of your pipeline, both the **Pipeline status** and the **Activity status** should show a **Succeeded** status.
 
-    ![Validate save and run the pipeline](./Media/final-pipeline-monitor.png)
+    ![Validate save and run the pipeline](./Media/final-pipeline-monitor1.png)
 
 # Task 3: Attach data pipeline to task flow
 
