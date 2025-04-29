@@ -180,7 +180,7 @@ In this lab, you will learn how to create a project task flow and understand the
 
     ![](./Media/23042025(43).png)
 
-1. Select the **Copy data (1)** activity and then go to the **Destination (2)** tab. Select the text box input for the **File path**, where after selection you will see the text **Add dynamic content [Alt+Shift+D] (4)**. Select this text to open the pipeline expression builder.
+1. Select the **Copy data** activity and then go to the **Destination** tab. Select the text box input for the **File path**, where after selection you will see the text **Add dynamic content [Alt+Shift+D] (4)**. Select this text to open the pipeline expression builder.
 
     ![](./Media/23042025(44).png)
 
